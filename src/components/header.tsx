@@ -95,10 +95,10 @@ export function Header() {
         </div>
       </header>
 
-      {/* Mobile Drawer Menu (Square Geometry) */}
+      {/* Mobile Drawer Menu (Solid High-Contrast Geometry) */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 flex flex-col bg-navy-dark/98 backdrop-blur-lg p-6 text-white animate-in fade-in duration-200">
-          <div className="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
+        <div className="fixed inset-0 z-[100] flex flex-col bg-[#08121e] p-6 text-white animate-in fade-in duration-200 shadow-2xl overflow-hidden">
+          <div className="flex items-center justify-between border-b border-white/15 pb-4 mb-6">
             <Image
               src="/galaxy_system_logo.svg"
               alt="Galaxy System Logo"
@@ -115,15 +115,15 @@ export function Header() {
             </button>
           </div>
 
-          <nav className="flex flex-col gap-2 overflow-y-auto py-2">
+          <nav className="flex flex-col gap-2.5 overflow-y-auto py-2">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="py-3 px-4 text-sm font-semibold uppercase tracking-wider border border-white/10 hover:border-sky hover:bg-sky/20 transition-all text-slate-200 hover:text-white"
+                className="py-3.5 px-4 text-xs font-bold uppercase tracking-wider border border-white/15 bg-[#0f2136] hover:border-sky hover:bg-sky/25 transition-all text-white flex items-center justify-between"
               >
-                {link.name}
+                <span>{link.name}</span>
               </Link>
             ))}
           </nav>
