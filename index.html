@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Galaxy System — Adaptive Driving & Mobility Solutions</title>
+    <meta name="description"
+        content="Galaxy System helps physically challenged individuals achieve safer, more comfortable, and independent mobility through customized adaptive driving and vehicle accessibility solutions in Bengaluru.">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Tailwind CSS v4 Browser Compiler -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- Typography: Lausanne -->
+
+    <!-- Custom Style Settings -->
+    <link rel="stylesheet" href="styles/global.css">
+
+    <style>
+        /* Hero heading color override */
+        .hero-title {
+            color: #ffffff !important;
+        }
+
+        /* Lenis Smooth Scroll base styles */
+        html.lenis, html.lenis body {
+            height: auto;
+        }
+        .lenis.lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+        .lenis.lenis-smooth iframe {
+            pointer-events: none;
+        }
+        
+        /* Hide scrollbar for horizontal scrolling sections */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col bg-[#eef5fa] text-[#0c1a29] selection:bg-[#4B9DCD] selection:text-white">
+
+    <!-- Header Section -->
+    <header id="main-header"
+        class="fixed top-0 z-50 w-full border-b border-[#0c1a29]/10 bg-[#eef5fa]/90 backdrop-blur-md transition-all duration-300">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-2 lg:px-8 lg:py-3">
+            <!-- Logo -->
+            <a aria-label="Galaxy System home" class="flex items-center gap-3" href="index.html">
+                <img src="galaxy_system_logo.svg" class="h-8 lg:h-10 w-auto" alt="Galaxy System Logo">
+            </a>
+
+            <!-- Navigation Links & CTAs (Right Aligned) -->
+            <div class="hidden items-center gap-8 md:flex">
+                <nav class="flex items-center gap-6">
+                    <a href="index.html" class="nav-link active-link text-sm font-medium text-[#0c1a29] font-semibold transition-colors">Home</a>
+                    <a href="index.html#services"
+                        class="nav-link text-sm font-medium text-[#475569] hover:text-[#0c1a29] transition-colors">Services</a>
+                    <a href="about.html"
+                        class="nav-link text-sm font-medium text-[#475569] hover:text-[#0c1a29] transition-colors">About us</a>
+                    <a href="stories.html"
+                        class="nav-link text-sm font-medium text-[#475569] hover:text-[#0c1a29] transition-colors">Insights</a>
+                    <a href="contact.html"
+                        class="nav-link text-sm font-medium text-[#475569] hover:text-[#0c1a29] transition-colors">Contact</a>
+                </nav>
+
+                <a id="nav-cta" href="contact.html"
+                    class="btn-primary items-center justify-center font-semibold transition-all duration-300">
+                    Book Consultation
+                </a>
+            </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn"
+                    class="inline-flex h-10 w-10 items-center justify-center rounded-xl border-transparent text-[#1a2f4a] transition-colors hover:bg-[#4B9DCD]/5 lg:hidden"
+                    aria-label="Open menu" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-menu">
+                        <path d="M4 5h16"></path>
+                        <path d="M4 12h16"></path>
+                        <path d="M4 19h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Overlay Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 hidden flex-col bg-[#09101a]/95 backdrop-blur-lg p-6">
+        <div class="flex items-center justify-between mb-8">
+            <img src="galaxy_system_logo.svg" class="h-8 w-auto" alt="Galaxy System Logo">
+            <button id="close-menu-btn"
+                class="h-10 w-10 flex items-center justify-center rounded-xl border-transparent text-[#1a2f4a]" aria-label="Close menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-x">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-4 text-lg font-medium text-[#1a2f4a]">
+            <a href="index.html" class="text-white font-semibold py-2 border-b border-transparent">Home</a>
+            <a href="index.html#services" class="hover:text-white py-2 border-b border-transparent">Services</a>
+            <a href="about.html" class="hover:text-white py-2 border-b border-transparent">About us</a>
+            <a href="stories.html" class="hover:text-white py-2 border-b border-transparent">Stories</a>
+            <a href="faq.html" class="hover:text-white py-2 border-b border-transparent">FAQs</a>
+            <a href="contact.html" class="hover:text-white py-2 border-b border-transparent">Contact</a>
+        </nav>
+        <div class="mt-auto flex flex-col gap-4">
+            <a href="tel:+919845056726"
+                class="py-3 border-transparent text-[#1a2f4a] text-center rounded-xl hover:bg-[#4B9DCD]/5">
+                Call Us
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <!-- Hero Section (Gradient Steel-Blue Background, Full Bleed Right Collage) -->
+        <section class="relative min-h-[75vh] flex items-center overflow-hidden border-b border-[#0c1a29]/10 bg-gradient-to-br from-[#d4e5f4] via-[#e5eff8] to-[#f0f6fc] text-[#0c1a29] pt-24 lg:pt-28 pb-12 lg:pb-16">
+            <!-- Glowing Ambient Gradient Orbs -->
+            <div class="absolute -top-24 -left-24 w-96 h-96 bg-[#4B9DCD]/25 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-20 left-1/3 w-[30rem] h-[30rem] bg-[#2b7aac]/15 rounded-full blur-3xl pointer-events-none"></div>
+
+            <!-- Subtle Technical Line Grid & Dot Pattern Background -->
+            <div class="absolute inset-0 opacity-25 pointer-events-none" 
+                 style="background-image: linear-gradient(to right, rgba(12, 26, 41, 0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(12, 26, 41, 0.06) 1px, transparent 1px), radial-gradient(rgba(75, 157, 205, 0.35) 1px, transparent 1px); background-size: 36px 36px, 36px 36px, 18px 18px;"></div>
+            
+            <div class="mx-auto max-w-7xl px-5 lg:px-8 py-4 relative z-10 w-full">
+                <div class="grid gap-10 lg:grid-cols-12 items-center">
+                    
+                    <!-- Left Column: Hero Copy (7 cols) -->
+                    <div class="lg:col-span-7 flex flex-col justify-between order-1 py-4 lg:py-8 lg:pr-6">
+                        <div>
+                            <h1 class="text-4xl font-medium leading-[1.08] tracking-[-0.03em] font-display-hero sm:text-6xl text-[#0c1a29]">
+                                Move & Drive With<br>
+                                <span class="text-[#4B9DCD]">Total Freedom</span>
+                            </h1>
+                            <p class="mt-5 text-base text-[#475569] leading-relaxed max-w-xl font-normal">
+                                Custom adaptive vehicle modifications and advanced prosthetic limbs — engineered to restore complete physical mobility, confidence, and active independence for persons with disabilities.
+                            </p>
+                        </div>
+
+                        <!-- Hero CTA Buttons -->
+                        <div class="mt-8 pt-6 border-t border-[#0c1a29]/10">
+                            <div class="flex flex-wrap gap-4">
+                                <a href="contact.html" class="btn-primary">
+                                    Book Free Consultation &rarr;
+                                </a>
+                                <a href="#services" class="btn-secondary">
+                                    Explore Solutions
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right Column: Full-Bleed Right Edge Photo Collage (Top to Bottom) -->
+            <div class="relative lg:absolute lg:top-0 lg:bottom-0 lg:right-0 lg:w-[44vw] xl:w-[42vw] h-[380px] lg:h-full w-full overflow-hidden border-l border-[#0c1a29]/15 shadow-2xl bg-[#0c1a29] z-10">
+                
+                <div class="grid grid-cols-12 grid-rows-12 h-full w-full gap-0.5 p-0 bg-[#0c1a29]">
+                    
+                    <!-- Bento Card 1: Adaptive SUV Client (Hero 7x8) -->
+                    <div class="col-span-7 row-span-8 relative overflow-hidden bg-[#101a28] group">
+                        <img src="assets/hero-main-user.jpg" alt="Galaxy System Client with Custom SUV" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0b1522]/90 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-2.5 left-2.5 px-2 py-0.5 bg-[#0b1522]/85 border border-white/20 text-[0.62rem] font-bold uppercase tracking-wider text-[#4B9DCD] backdrop-blur-md">Adaptive Vehicles</span>
+                    </div>
+
+                    <!-- Bento Card 2: Hand Controls (Top Right 5x5) -->
+                    <div class="col-span-5 row-span-5 relative overflow-hidden bg-[#101a28] group">
+                        <img src="assets/adaptive_driving_card.png" alt="Adaptive Driving Controls" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0b1522]/80 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-2 left-2 px-1.5 py-0.5 bg-[#0b1522]/85 border border-white/20 text-[0.58rem] font-bold uppercase tracking-wider text-slate-200 backdrop-blur-md">Hand Controls</span>
+                    </div>
+
+                    <!-- Bento Card 3: Prosthetics (Mid/Bottom Right 5x7) -->
+                    <div class="col-span-5 row-span-7 relative overflow-hidden bg-[#101a28] group">
+                        <img src="assets/hero_prosthetic.png" alt="Prosthetic Mobility Solution" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0b1522]/90 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-2.5 left-2 px-2 py-0.5 bg-[#0b1522]/85 border border-white/20 text-[0.62rem] font-bold uppercase tracking-wider text-[#4B9DCD] backdrop-blur-md">Prosthetics</span>
+                    </div>
+
+                    <!-- Bento Card 4: Certified Workshop (Bottom Left 7x4) -->
+                    <div class="col-span-7 row-span-4 relative overflow-hidden bg-[#101a28] group">
+                        <img src="assets/hero-workshop.jpg" alt="Galaxy System Engineering Workshop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0b1522]/80 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-2 left-2.5 px-2 py-0.5 bg-[#0b1522]/85 border border-white/20 text-[0.58rem] font-bold uppercase tracking-wider text-slate-200 backdrop-blur-md">Workshop</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Boxy Operational Guidelines Grid Section
+        <section id="features" class="boxed-section bg-[#eef5fa] py-12 lg:py-20 border-b border-[#0c1a29]/10">
+            <div class="mx-auto max-w-7xl px-5 lg:px-8">
+                
+                <div class="mb-10 max-w-2xl">
+                    <span class="section-label">How We Work</span>
+                    <h2 class="text-3xl font-bold tracking-tight text-[#0c1a29] font-display sm:text-4xl">Our Operational Framework</h2>
+                    <p class="mt-3 text-sm text-[#475569]">Three foundational principles governing our custom vehicle adaptations and clinical fits.</p>
+                </div>
+
+                <div class="boxed-grid-frame grid-cols-1 md:grid-cols-3">
+                    
+                    <div class="boxed-tile bg-white">
+                        <div class="h-10 w-10 bg-[#e3f1f9] text-[#4B9DCD] flex items-center justify-center mb-6 border border-[#4B9DCD]/30">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                        </div>
+                        <span class="text-xs font-bold text-[#4B9DCD] uppercase tracking-wider block mb-1">01. Principle</span>
+                        <h3 class="text-xl font-bold text-[#0c1a29] font-display mb-3">Safety-First Engineering</h3>
+                        <p class="text-xs text-[#475569] leading-relaxed">
+                            Every vehicle modification complies with RTO safety guidelines and undergoes intensive on-road testing before delivery.
+                        </p>
+                    </div>
+
+                    <div class="boxed-tile bg-white">
+                        <div class="h-10 w-10 bg-[#e3f1f9] text-[#4B9DCD] flex items-center justify-center mb-6 border border-[#4B9DCD]/30">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect width="7" height="7" x="3" y="3" rx="1"></rect><rect width="7" height="7" x="14" y="3" rx="1"></rect><rect width="7" height="7" x="14" y="14" rx="1"></rect><rect width="7" height="7" x="3" y="14" rx="1"></rect></svg>
+                        </div>
+                        <span class="text-xs font-bold text-[#4B9DCD] uppercase tracking-wider block mb-1">02. Principle</span>
+                        <h3 class="text-xl font-bold text-[#0c1a29] font-display mb-3">Personalized Customization</h3>
+                        <p class="text-xs text-[#475569] leading-relaxed">
+                            Every adaptation is calibrated around the individual's specific medical condition, joint movement range, and posture.
+                        </p>
+                    </div>
+
+                    <div class="boxed-tile bg-white">
+                        <div class="h-10 w-10 bg-[#e3f1f9] text-[#4B9DCD] flex items-center justify-center mb-6 border border-[#4B9DCD]/30">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 1 0 0-2.828l2.823-2.762"></path></svg>
+                        </div>
+                        <span class="text-xs font-bold text-[#4B9DCD] uppercase tracking-wider block mb-1">03. Principle</span>
+                        <h3 class="text-xl font-bold text-[#0c1a29] font-display mb-3">Direct Individual Focus</h3>
+                        <p class="text-xs text-[#475569] leading-relaxed">
+                            We work 1-on-1 directly with individual persons with disabilities to provide transparent advice and dedicated long-term care.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        -->
+
+        <!-- Services Section ("Our Solutions" Light Canvas Theme) -->
+        <section id="services" class="boxed-section bg-[#eef5fa] py-12 lg:py-20 border-b border-[#0c1a29]/10">
+            <div class="mx-auto max-w-7xl px-5 lg:px-8">
+                
+                <div class="mb-10 max-w-2xl">
+                    <span class="section-label">Services & Solutions</span>
+                    <h2 class="text-3xl font-bold text-[#0c1a29] font-display sm:text-4xl">Engineering Solutions</h2>
+                    <p class="mt-3 text-sm text-[#475569]">Customized adaptive driving modifications and advanced prosthetic solutions designed for independent living.</p>
+                </div>
+
+                <!-- Boxy 1px Wireframe Grid for Services -->
+                <div class="boxed-grid-frame grid-cols-1 md:grid-cols-2">
+                    
+                    <!-- Service 1: Adaptive Mobility -->
+                    <a href="solutions/adaptive-mobility.html" class="boxed-tile bg-white group block text-left">
+                        <div class="h-52 overflow-hidden mb-3 relative">
+                            <img src="assets/adaptive_driving_card.png" alt="Adaptive Mobility Solutions" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-xs font-bold text-[#4B9DCD] uppercase tracking-wider block">Vehicle Modifications</span>
+                            <h3 class="text-2xl font-bold text-[#0c1a29] font-display group-hover:text-[#4B9DCD] transition-colors">Adaptive Mobility Solutions</h3>
+                            <p class="text-xs text-[#475569] leading-relaxed">
+                                Customized vehicle modifications including Push-Pull hand controls, Left Foot Accelerator, Automatic Clutch, Ring Accelerator, Steering Transmitter, and Tip-Up transfer plates.
+                            </p>
+                            <span class="inline-flex items-center text-xs font-bold text-[#0c1a29] group-hover:text-[#4B9DCD] transition-colors pt-1">
+                                View All 8 Vehicle Solutions &rarr;
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Service 2: Prosthetics & Orthotics -->
+                    <a href="solutions/prosthetics.html" class="boxed-tile bg-white group block text-left">
+                        <div class="h-52 overflow-hidden mb-3 relative">
+                            <img src="assets/prosthetics_card.png" alt="Prosthetics and Orthotics" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-xs font-bold text-[#4B9DCD] uppercase tracking-wider block">Limb Support & Calipers</span>
+                            <h3 class="text-2xl font-bold text-[#0c1a29] font-display group-hover:text-[#4B9DCD] transition-colors">Prosthetics & Orthotics</h3>
+                            <p class="text-xs text-[#475569] leading-relaxed">
+                                Advanced artificial limbs, 3D-scanned sockets, customized AFO/KAFO orthopedic calipers, passive/myoelectric hands, and comprehensive rehabilitation support.
+                            </p>
+                            <span class="inline-flex items-center text-xs font-bold text-[#0c1a29] group-hover:text-[#4B9DCD] transition-colors pt-1">
+                                View Prosthetic & Orthotic Fitting &rarr;
+                            </span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About Galaxy System Section -->
+        <section id="about-intro" class="mx-auto max-w-7xl px-5 py-12 lg:px-8 lg:py-20 border-b border-[#0c1a29]/10 text-[#0c1a29]">
+            <div class="grid gap-6 lg:grid-cols-2 items-center">
+                <div>
+                    <span class="section-label">About Galaxy System</span>
+                    <h2 class="mt-3 text-3xl font-semibold text-[#0c1a29] tracking-tight font-display sm:text-4xl lg:text-5xl">
+                        Mobility Designed Around Independence
+                    </h2>
+                    <p class="mt-6 text-[#475569] leading-relaxed">
+                        Galaxy System is a Bengaluru-based mobility solutions company focused on helping differently abled individuals move, drive, and travel with greater confidence, comfort, and independence.
+                    </p>
+                    <p class="mt-4 text-[#475569] leading-relaxed">
+                        We specialize in two core pillars of independent mobility: custom-fitted <strong class="text-[#0c1a29]">adaptive vehicle modifications</strong> (such as hand controls, left-foot accelerators, and electronic clutches) and advanced <strong class="text-[#0c1a29]">prosthetic and orthotic limbs</strong> designed for everyday active life.
+                    </p>
+                    <div class="mt-8">
+                        <a href="about.html" class="btn-secondary">
+                            Learn More About Us &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative w-full">
+                    <div class="flex justify-end items-end mb-4">
+                        <div class="flex gap-2 hidden sm:flex">
+                            <button aria-label="Previous" class="h-8 w-8 rounded-full bg-white flex items-center justify-center text-[#0c1a29] hover:bg-[#e2eff8] transition-colors border border-[#0c1a29]/10" onclick="document.getElementById('image-carousel').scrollBy({left:-260, behavior:'smooth'})">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                            </button>
+                            <button aria-label="Next" class="h-8 w-8 rounded-full bg-white flex items-center justify-center text-[#0c1a29] hover:bg-[#e2eff8] transition-colors border border-[#0c1a29]/10" onclick="document.getElementById('image-carousel').scrollBy({left:260, behavior:'smooth'})">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- CSS Scroll Snap Carousel -->
+                    <div id="image-carousel" class="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2 -mx-4 px-4 sm:mx-0 sm:px-0" style="scrollbar-width: none;">
+                        <style>
+                            #image-carousel::-webkit-scrollbar { display: none; }
+                        </style>
+                        
+                        <!-- Video/Reel 1 -->
+                        <div class="min-w-[240px] max-w-[240px] aspect-[4/5] snap-start rounded-2xl overflow-hidden border border-[rgba(13,28,46,0.08)] hover:shadow-md transition duration-300 relative group cursor-pointer">
+                            <img src="assets/reel_thumb_1.png" alt="Facility Video 1" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition duration-300 flex items-center justify-center">
+                                <div class="w-14 h-14 rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center text-white pl-1 group-hover:bg-white/50 transition">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Image 1 -->
+                        <div class="min-w-[240px] max-w-[240px] aspect-[4/5] snap-start rounded-2xl overflow-hidden border border-[rgba(13,28,46,0.08)] hover:shadow-md transition duration-300">
+                            <img src="assets/gallery-1.png" alt="Facility Image 1" class="w-full h-full object-cover">
+                        </div>
+                        
+                        <!-- Video/Reel 2 -->
+                        <div class="min-w-[240px] max-w-[240px] aspect-[4/5] snap-start rounded-2xl overflow-hidden border border-[rgba(13,28,46,0.08)] hover:shadow-md transition duration-300 relative group cursor-pointer">
+                            <img src="assets/reel_thumb_2.png" alt="Facility Video 2" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition duration-300 flex items-center justify-center">
+                                <div class="w-14 h-14 rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center text-white pl-1 group-hover:bg-white/50 transition">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Image 2 -->
+                        <div class="min-w-[240px] max-w-[240px] aspect-[4/5] snap-start rounded-2xl overflow-hidden border border-[rgba(13,28,46,0.08)] hover:shadow-md transition duration-300">
+                            <img src="assets/gallery-2.png" alt="Facility Image 2" class="w-full h-full object-cover">
+                        </div>
+                        
+                        <!-- Video/Reel 3 -->
+                        <div class="min-w-[240px] max-w-[240px] aspect-[4/5] snap-start rounded-2xl overflow-hidden border border-[rgba(13,28,46,0.08)] hover:shadow-md transition duration-300 relative group cursor-pointer">
+                            <img src="assets/reel_thumb_3.png" alt="Facility Video 3" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition duration-300 flex items-center justify-center">
+                                <div class="w-14 h-14 rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center text-white pl-1 group-hover:bg-white/50 transition">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How Adaptive Driving Works Section -->
+
+        <!-- Before/After Showcase Section -->
+        <section id="showcase" style="display: none;"
+            class="mx-auto max-w-7xl px-5 py-8 lg:px-8 lg:py-28 border-b border-white/10 bg-[#09101a]">
+            <div class="text-center max-w-2xl mx-auto mb-6">
+                <span class="text-xs font-bold uppercase tracking-wider text-white font-display">Modification
+                    Showcase</span>
+                <h2
+                    class="mt-3 text-3xl font-semibold text-white tracking-tight font-display sm:text-4xl lg:text-5xl">
+                    Before / After Setup</h2>
+                <p class="mt-4 text-[#94a3b8]">Explore how standard vehicle controls are transformed into custom,
+                    safety-certified adaptive solutions.</p>
+            </div>
+
+            <!-- Showcase Switcher -->
+            <div class="bg-[#101a28] p-8 border border-white/10 shadow-[0_1px_2px_rgba(15,23,42,0.03)]">
+                <div class="flex flex-wrap gap-2 justify-center border-b border-transparent pb-6 mb-8" id="showcase-tabs">
+                    <button class="px-5 py-2.5 rounded-xl text-sm font-semibold transition bg-[#09101a] text-white"
+                        data-tab="hand-controls">Adaptive Hand Controls</button>
+                    <button
+                        class="px-5 py-2.5 rounded-xl text-sm font-semibold transition hover:bg-slate-100 text-[#94a3b8]"
+                        data-tab="clutch">Electronic Clutch</button>
+                    <button
+                        class="px-5 py-2.5 rounded-xl text-sm font-semibold transition hover:bg-slate-100 text-[#94a3b8]"
+                        data-tab="accelerator">Left Foot Accelerator</button>
+                </div>
+
+                <div id="showcase-content">
+                    <!-- Tab 1: Hand Controls -->
+                    <div id="tab-hand-controls" class="grid gap-6 lg:grid-cols-2 items-center">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-[#101a28] p-4 border border-white/10 text-center">
+                                <span
+                                    class="text-xs font-bold text-[#546880] block mb-3 uppercase tracking-wider">Before</span>
+                                <div
+                                    class="aspect-video bg-slate-200 rounded-xl overflow-hidden flex items-center justify-center text-[#546880] font-medium">
+                                    Standard Pedals</div>
+                                <p class="text-xs text-[#94a3b8] mt-3">Driver relies entirely on lower limbs to operate
+                                    throttle and brakes.</p>
+                            </div>
+                            <div class="bg-[#101a28] p-4 border border-white/10 text-center">
+                                <span class="text-xs font-bold text-white block mb-3 uppercase tracking-wider">After
+                                    Modification</span>
+                                <div
+                                    class="aspect-video bg-slate-200 rounded-xl overflow-hidden flex items-center justify-center text-[#1a2f4a] font-medium">
+                                    Push-Pull Hand Control Lever</div>
+                                <p class="text-xs text-[#94a3b8] mt-3">Pedals are mapped to a secure hand lever on the
+                                    steering column.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white font-display mb-3">Hand Control System
+                                Installation</h3>
+                            <p class="text-sm text-[#94a3b8] leading-relaxed mb-4">
+                                For individuals with lower-limb restrictions, we install a high-end push-pull hand
+                                controller. The mechanical assembly is anchored securely to the vehicle structure using
+                                bespoke, CAD-designed brackets.
+                            </p>
+                            <ul class="text-xs text-[#94a3b8] space-y-2 mb-6">
+                                <li class="flex items-center gap-2">&bull; Safety-cleared mechanical design</li>
+                                <li class="flex items-center gap-2">&bull; Hand throttle and braking levers with
+                                    ergonomic grip</li>
+                                <li class="flex items-center gap-2">&bull; Original pedals remain intact and functional
+                                    for other drivers</li>
+                            </ul>
+                            <a href="solutions/adaptive-mobility.html"
+                                class="inline-flex items-center justify-center rounded-xl bg-[#09101a] px-6 py-3 text-xs font-semibold text-white transition hover:bg-[#4B9DCD]">Explore
+                                Solution Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Tab 2: Clutch (hidden by default) -->
+                    <div id="tab-clutch" class="hidden grid gap-6 lg:grid-cols-2 items-center">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-[#101a28] p-4 border border-white/10 text-center">
+                                <span
+                                    class="text-xs font-bold text-[#546880] block mb-3 uppercase tracking-wider">Before</span>
+                                <div
+                                    class="aspect-video bg-slate-200 rounded-xl overflow-hidden flex items-center justify-center text-[#546880] font-medium">
+                                    Standard Manual Clutch</div>
+                                <p class="text-xs text-[#94a3b8] mt-3">Driver must press the heavy pedal down on every
+                                    gear shift.</p>
+                            </div>
+                            <div class="bg-[#101a28] p-4 border border-white/10 text-center">
+                                <span class="text-xs font-bold text-white block mb-3 uppercase tracking-wider">After
+                                    Modification</span>
+                                <div
+                                    class="aspect-video bg-slate-200 rounded-xl overflow-hidden flex items-center justify-center text-[#1a2f4a] font-medium">
+                                    Touch-Sensor Gear Knob</div>
+                                <p class="text-xs text-[#94a3b8] mt-3">Pedal is bypassed by a motorized clutch actuator
+                                    system.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white font-display mb-3">Electronic Clutch Automation
+                            </h3>
+                            <p class="text-sm text-[#94a3b8] leading-relaxed mb-4">
+                                Our electronic clutch automation system makes manual vehicles much easier to operate. A
+                                sensor embedded in the gear knob registers contact and engages the clutch automatically,
+                                removing pedal strain completely.
+                            </p>
+                            <ul class="text-xs text-[#94a3b8] space-y-2 mb-6">
+                                <li class="flex items-center gap-2">&bull; Ideal for heavy bumper-to-bumper city traffic
+                                </li>
+                                <li class="flex items-center gap-2">&bull; Bypasses manual clutch pedal operation</li>
+                                <li class="flex items-center gap-2">&bull; Turn-on/turn-off switch to toggle back to
+                                    standard manual mode</li>
+                            </ul>
+                            <a href="contact.html"
+                                class="inline-flex items-center justify-center rounded-xl bg-[#09101a] px-6 py-3 text-xs font-semibold text-white transition hover:bg-[#4B9DCD]">Request
+                                Consultation</a>
+                        </div>
+                    </div>
+
+                    <!-- Tab 3: Accelerator (hidden by default) -->
+                    <div id="tab-accelerator" class="hidden grid gap-6 lg:grid-cols-2 items-center">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-[#101a28] p-4 border border-white/10 text-center">
+                                <span
+                                    class="text-xs font-bold text-[#546880] block mb-3 uppercase tracking-wider">Before</span>
+                                <div
+                                    class="aspect-video bg-slate-200 rounded-xl overflow-hidden flex items-center justify-center text-[#546880] font-medium">
+                                    Right Foot Pedal</div>
+                                <p class="text-xs text-[#94a3b8] mt-3">Accelerator lies solely on the right side of the
+                                    footwell.</p>
+                            </div>
+                            <div class="bg-[#101a28] p-4 border border-white/10 text-center">
+                                <span class="text-xs font-bold text-white block mb-3 uppercase tracking-wider">After
+                                    Modification</span>
+                                <div
+                                    class="aspect-video bg-slate-200 rounded-xl overflow-hidden flex items-center justify-center text-[#1a2f4a] font-medium">
+                                    Left Foot Pedal Plate</div>
+                                <p class="text-xs text-[#94a3b8] mt-3">Detachable pedal plate transfers control to the
+                                    left side.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white font-display mb-3">Detachable Left Foot
+                                Accelerator</h3>
+                            <p class="text-sm text-[#94a3b8] leading-relaxed mb-4">
+                                Designed for drivers who have limited or painful right leg movement. We install a
+                                left-foot pedal linked mechanically to the throttle. The mechanism features a safety
+                                guard to prevent accidental right-side pedal pressing.
+                            </p>
+                            <ul class="text-xs text-[#94a3b8] space-y-2 mb-6">
+                                <li class="flex items-center gap-2">&bull; High-strength mechanical transmission linkage
+                                </li>
+                                <li class="flex items-center gap-2">&bull; Quick-release plate allows detaching pedal in
+                                    10 seconds</li>
+                                <li class="flex items-center gap-2">&bull; Restores standard right-side setup for family
+                                    members</li>
+                            </ul>
+                            <a href="contact.html"
+                                class="inline-flex items-center justify-center rounded-xl bg-[#09101a] px-6 py-3 text-xs font-semibold text-white transition hover:bg-[#4B9DCD]">Inquire
+                                Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>        <!-- Achievements Section -->
+        <section id="achievements" class="bg-[#09101a] py-16 lg:py-24 border-t border-white/10 bg-dot-pattern-dark bg-mesh-glow-dark relative">
+            <div class="mx-auto max-w-7xl px-5 lg:px-8">
+                
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <p class="text-xs font-bold uppercase tracking-wider text-[#4B9DCD] font-display mb-3">Our Impact</p>
+                    <h2 class="text-3xl font-semibold text-white tracking-tight font-display sm:text-4xl lg:text-5xl">
+                        Achievements & Milestones
+                    </h2>
+                    <p class="mt-4 text-[#94a3b8] text-lg">
+                        Decades of engineering focused on safety, usability, and empowering independent mobility across India.
+                    </p>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8 mb-12">
+                    <div class="bg-[#101a28] p-6 text-center border border-white/10 border border-white/10">
+                        <div class="text-4xl font-bold text-white mb-2">15<span class="text-[#4B9DCD]">+</span></div>
+                        <div class="text-sm font-semibold text-[#94a3b8] uppercase tracking-wide">Years Experience</div>
+                    </div>
+                    <div class="bg-[#101a28] p-6 text-center border border-white/10 border border-white/10">
+                        <div class="text-4xl font-bold text-white mb-2">500<span class="text-[#4B9DCD]">+</span></div>
+                        <div class="text-sm font-semibold text-[#94a3b8] uppercase tracking-wide">Modifications</div>
+                    </div>
+                    <div class="bg-[#101a28] p-6 text-center border border-white/10 border border-white/10 flex flex-col items-center justify-center">
+                        <div class="w-10 h-10 bg-[#4B9DCD]/10 rounded-full flex items-center justify-center mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4B9DCD" stroke-width="2.5"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+                        </div>
+                        <div class="text-lg font-bold text-white">RTO Approved</div>
+                        <div class="text-xs font-semibold text-[#4B9DCD] uppercase tracking-wide mt-1">Govt. of Karnataka</div>
+                    </div>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="md:col-span-2 rounded-3xl overflow-hidden relative h-64 md:h-80 group shadow-sm">
+                        <img src="assets/collage_2.png" alt="Workshop" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0d1c2e]/80 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6">
+                            <span class="bg-white/20 text-white backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-2 inline-block">Workshop</span>
+                            <h3 class="text-2xl font-bold text-white">Precision Engineered for Every Individual</h3>
+                        </div>
+                    </div>
+                    <div class="rounded-3xl overflow-hidden relative h-64 md:h-80 group shadow-sm">
+                        <img src="assets/collage_1.jpg" alt="Facility" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0d1c2e]/80 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6">
+                            <h3 class="text-xl font-bold text-white mb-1">Our Facility</h3>
+                            <p class="text-white/70 text-sm">Bengaluru, Karnataka</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- Contact & Team consultation Section -->
+        <section id="contact" class="bg-white py-12 lg:py-16 border-t border-[#0c1a29]/10">
+            <div class="mx-auto max-w-7xl px-5 lg:px-8">
+                <div class="grid gap-6 lg:grid-cols-2 lg:gap-10 items-center">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-[#2b7aac] font-display">Contact
+                            Us</span>
+                        <h2
+                            class="mt-3 text-3xl font-semibold text-[#0c1a29] tracking-tight font-display sm:text-4xl lg:text-5xl">
+                            Speak With Our Team</h2>
+                        <p class="mt-4 text-[#475569] leading-relaxed">
+                            Reach out to our specialists to discuss suitable adaptive driving installations and check
+                            access certifications.
+                        </p>
+
+                        <div class="mt-8 space-y-5">
+                            <!-- Office -->
+                            <div class="flex items-start gap-4">
+                                <div class="h-10 w-10 bg-[#4B9DCD]/15 text-[#2b7aac] rounded-xl flex items-center justify-center shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#0c1a29]">Office <span class="text-xs font-normal text-[#64748b]">(Near Shankar Mutt)</span></h4>
+                                    <p class="text-sm text-[#475569] mt-1">12th 'B' Cross, 13th Main, 2nd Stage, WOC,<br>behind BBMP Office, Ward, Nagapura,<br>Bengaluru, Karnataka 560086</p>
+                                </div>
+                            </div>
+                            <!-- Garage / Workshop -->
+                            <div class="flex items-start gap-4">
+                                <div class="h-10 w-10 bg-[#4B9DCD]/15 text-[#2b7aac] rounded-xl flex items-center justify-center shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#0c1a29]">Garage & Fabrication Workshop</h4>
+                                    <p class="text-sm text-[#475569] mt-1">608, Dr Rajkumar Road, Opp. ICICI Bank,<br>2nd Block, Rajajinagar,<br>Bengaluru, Karnataka 560010</p>
+                                </div>
+                            </div>
+                            <!-- Phone -->
+                            <div class="flex items-start gap-4">
+                                <div class="h-10 w-10 bg-[#4B9DCD]/15 text-[#2b7aac] rounded-xl flex items-center justify-center shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#0c1a29]">Call Us Directly</h4>
+                                    <a href="tel:+919845056726" class="block text-base font-bold text-[#2b7aac] hover:text-[#0c1a29] transition mt-1">+91 98450 56726</a>
+                                    <a href="tel:+919448701111" class="block text-base font-bold text-[#2b7aac] hover:text-[#0c1a29] transition">+91 94487 01111</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action buttons including WhatsApp Quick Connect -->
+                        <div class="mt-5 flex flex-wrap items-center gap-4">
+                            <a href="tel:+919845056726"
+                                class="inline-flex items-center gap-2 justify-center rounded-xl bg-[#0c1a29] px-8 py-4 text-base font-semibold text-white shadow-md transition hover:bg-[#1e344d] active:scale-98">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                    </path>
+                                </svg>
+                                Call Workshop
+                            </a>
+                            <a href="https://wa.me/919845056726?text=Hello%20Galaxy%20System,%20I'm%20interested%20in%20adaptive%20mobility%20solutions."
+                                target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center gap-2 justify-center rounded-xl bg-[#25D366] hover:bg-[#20bd5a] px-8 py-4 text-base font-semibold text-white shadow-md transition active:scale-98">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z">
+                                    </path>
+                                </svg>
+                                WhatsApp Quick Connect
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Interactive Consultation request form -->
+                    <div class="rounded-[2rem] p-8 shadow-lg bg-[#f8fafc] border border-slate-200">
+                        <h3 class="text-xl font-bold text-[#0c1a29] font-display mb-2">Request Consultation</h3>
+                        <p class="text-xs text-[#475569] mb-6">Leave your details and our mobility technicians will
+                            reach out within 24 hours.</p>
+
+                        <form id="consultation-form" class="space-y-4">
+                            <div>
+                                <label for="form-name" class="block text-xs font-semibold text-[#0c1a29] mb-1">Your
+                                    Name</label>
+                                <input type="text" id="form-name"
+                                    class="w-full px-4 py-3 border border-slate-300 rounded-xl bg-white text-sm text-[#0c1a29] placeholder:text-slate-400 outline-none focus:border-[#4B9DCD] focus:ring-1 focus:ring-[#4B9DCD] transition"
+                                    placeholder="Enter full name" required>
+                            </div>
+                            <div>
+                                <label for="form-email" class="block text-xs font-semibold text-[#0c1a29] mb-1">Email
+                                    Address</label>
+                                <input type="email" id="form-email"
+                                    class="w-full px-4 py-3 border border-slate-300 rounded-xl bg-white text-sm text-[#0c1a29] placeholder:text-slate-400 outline-none focus:border-[#4B9DCD] focus:ring-1 focus:ring-[#4B9DCD] transition"
+                                    placeholder="name@example.com" required>
+                            </div>
+                            <div>
+                                <label for="form-phone" class="block text-xs font-semibold text-[#0c1a29] mb-1">Phone
+                                    Number</label>
+                                <input type="tel" id="form-phone"
+                                    class="w-full px-4 py-3 border border-slate-300 rounded-xl bg-white text-sm text-[#0c1a29] placeholder:text-slate-400 outline-none focus:border-[#4B9DCD] focus:ring-1 focus:ring-[#4B9DCD] transition"
+                                    placeholder="+91 XXXXX XXXXX" required>
+                            </div>
+                            <div>
+                                <label for="form-message"
+                                    class="block text-xs font-semibold text-[#0c1a29] mb-1">Vehicle Model &
+                                    Requirements</label>
+                                <textarea id="form-message" rows="3"
+                                    class="w-full px-4 py-3 border border-slate-300 rounded-xl bg-white text-sm text-[#0c1a29] placeholder:text-slate-400 outline-none focus:border-[#4B9DCD] focus:ring-1 focus:ring-[#4B9DCD] transition"
+                                    placeholder="E.g., Swift 2022, Hand Controls needed" required></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full py-4 bg-[#0c1a29] hover:bg-[#1e344d] text-white font-bold text-sm rounded-xl transition shadow-md active:scale-98">
+                                Submit Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="border-t border-[rgba(255,255,255,0.06)] bg-[#040a12] py-8 text-sm text-[#546880]">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+            <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-4 lg:gap-10">
+                <!-- Branding -->
+                <div class="flex flex-col gap-4">
+                    <a aria-label="Galaxy System home" class="flex items-center gap-3" href="index.html">
+                        <img src="galaxy_system_logo.svg" class="h-8 w-auto" alt="Galaxy System Logo">
+                    </a>
+                    <p class="text-xs leading-relaxed text-[#94a3b8]">
+                        Adaptive driving modifications and vehicle entry accessibility systems designed around
+                        individual comfort, safety, and everyday independence.
+                    </p>
+                </div>
+                <!-- Links: Company -->
+                <div class="flex flex-col gap-3">
+                    <h4 class="font-semibold text-white font-display">Company</h4>
+                    <a href="about.html" class="hover:text-white transition-colors">About Us</a>
+                    <a href="stories.html" class="hover:text-white transition-colors">Insights</a>
+                    <a href="achievements.html" class="hover:text-white transition-colors">Achievements</a>
+                    <a href="testimonials.html" class="hover:text-white transition-colors">Testimonials</a>
+                    <a href="gallery.html" class="hover:text-white transition-colors">Gallery</a>
+                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-white transition-colors">Terms & Conditions</a>
+                </div>
+                <!-- Links: Solutions -->
+                <div class="flex flex-col gap-3">
+                    <h4 class="font-semibold text-white font-display">Solutions</h4>
+                    <a href="solutions/adaptive-mobility.html" class="hover:text-white transition-colors">Adaptive
+                        Driving</a>
+                    <a href="solutions/prosthetics.html" class="hover:text-white transition-colors">Prosthetics &
+                        Orthotics</a>
+                    <a href="faq.html" class="hover:text-white transition-colors">FAQ Support</a>
+                </div>
+                <!-- Links: Contact -->
+                <div class="flex flex-col gap-3">
+                    <h4 class="font-semibold text-white font-display">Contact Us</h4>
+                    <div class="text-xs text-[#94a3b8] space-y-2">
+                        <div>
+                            <span class="text-[#4B9DCD] font-medium block text-[11px] uppercase tracking-wider">Office (Near Shankar Mutt)</span>
+                            <span>12th 'B' Cross, 13th Main, 2nd Stage,<br>WOC, behind BBMP Office, Ward,<br>Nagapura, Bengaluru, KA 560086</span>
+                        </div>
+                        <div>
+                            <span class="text-[#4B9DCD] font-medium block text-[11px] uppercase tracking-wider mt-1.5">Garage & Workshop</span>
+                            <span>608, Dr Rajkumar Road, Opp. ICICI Bank,<br>2nd Block, Rajajinagar,<br>Bengaluru, KA 560010</span>
+                        </div>
+                    </div>
+                    <a href="tel:+919845056726"
+                        class="hover:text-white transition-colors font-semibold text-[#b8c6d4] flex flex-col gap-1 mt-1">
+                        <span>+91 98450 56726</span>
+                        <span>+91 94487 01111</span>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-[rgba(255,255,255,0.06)] pt-8 text-center text-xs">
+                <p>&copy; 2026 Galaxy System. All rights reserved. <a href="privacy.html" class="hover:text-white underline ml-2">Privacy Policy</a> | <a href="terms.html" class="hover:text-white underline ml-1">Terms & Conditions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Full Video Modal -->
+    <div id="videoModal"
+        class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-[#040a12]/95 backdrop-blur-sm p-4 sm:p-8">
+        <!-- Close Button -->
+        <button type="button" onclick="closeVideoModal()" aria-label="Close video modal"
+            class="absolute top-6 right-6 z-10 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition backdrop-blur-md">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" class="lucide lucide-x">
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+            </svg>
+        </button>
+        <!-- Video Container (16:9) -->
+        <div class="relative w-full max-w-5xl aspect-video bg-black rounded-3xl overflow-hidden shadow-sm">
+            <video id="fullModalVideo" src="" poster="" controls autoplay playsinline
+                class="w-full h-full object-contain"></video>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        function openVideoModal(src, poster) {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('fullModalVideo');
+            video.src = src;
+            video.poster = poster;
+            modal.classList.remove('hidden');
+            video.play().catch(e => console.log('Autoplay blocked', e));
+            document.body.style.overflow = 'hidden';
+        }
+        function closeVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('fullModalVideo');
+            video.pause();
+            video.src = '';
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+    </script>
+
+    <!-- Quarter-Circle Arc FAB -->
+    <style>
+        /* Overlay to close on outside click */
+        #fab-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 89;
+            display: none;
+            cursor: default;
+        }
+
+        #fab-overlay.fab-active {
+            display: block;
+        }
+
+        /* The anchor container — exactly the size of the hub button */
+        #fab-container {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 90;
+            width: 62px;
+            height: 62px;
+        }
+
+        /* Faint quarter-circle guide ring */
+        #fab-ring {
+            position: absolute;
+            /* Ring diameter = 2 × (radius + half-button-size) */
+            width: 220px;
+            height: 220px;
+            bottom: 0;
+            right: 0;
+            border-radius: 50%;
+            border: 1.5px solid rgba(30, 41, 59, 0.08);
+            pointer-events: none;
+            opacity: 0;
+            transform: scale(0.6);
+            transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.34, 1.4, 0.64, 1);
+            /* Clip to only the top-left quadrant */
+            clip-path: polygon(0% 0%, 50.1% 0%, 50.1% 50.1%, 0% 50.1%);
+        }
+
+        #fab-ring.fab-active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* All action items — absolute, starting at hub center */
+        .fab-arc-item {
+            position: absolute;
+            /* Center at hub center: (31-25)=6px offset for 50px button */
+            top: 6px;
+            left: 6px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 18px rgba(15, 23, 42, 0.22);
+            cursor: pointer;
+            opacity: 0;
+            /* Start collapsed at hub center */
+            transform: translate(0, 0) scale(0.3);
+            transition:
+                transform 0.32s cubic-bezier(0.34, 1.56, 0.64, 1),
+                opacity 0.22s ease,
+                box-shadow 0.18s ease;
+            pointer-events: none;
+        }
+
+        .fab-arc-item:hover {
+            box-shadow: 0 6px 24px rgba(15, 23, 42, 0.3);
+            filter: brightness(1.08);
+        }
+
+        /* Individual arc endpoint positions (translate from hub center) */
+        /* r=100px; 180°=left, 135°=upper-left, 90°=up */
+        /* dx = r·cos(θ), dy = -r·sin(θ)  [CSS y-axis is inverted] */
+        #fab-wa {
+            background: #25D366;
+            color: white;
+            transition-delay: 0s;
+        }
+
+        #fab-cal {
+            background: #0d1520;
+            color: white;
+            transition-delay: 0.05s;
+        }
+
+        #fab-em {
+            background: #f1f5f9;
+            color: #334155;
+            transition-delay: 0.1s;
+        }
+
+        /* Open state — fly to arc positions */
+        #fab-wa.fab-active {
+            transform: translate(-105px, 0) scale(1);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        #fab-cal.fab-active {
+            transform: translate(-74px, -74px) scale(1);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        #fab-em.fab-active {
+            transform: translate(0, -105px) scale(1);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Hover tooltip labels — appear to the right of each arc item (toward hub) */
+        .fab-arc-label {
+            position: absolute;
+            right: calc(100% + 10px);
+            top: 50%;
+            transform: translateY(-50%);
+            background: #0d1520;
+            color: white;
+            font-size: 11.5px;
+            font-weight: 600;
+            padding: 5px 11px;
+            border-radius: 100px;
+            white-space: nowrap;
+            box-shadow: 0 2px 10px rgba(15, 23, 42, 0.2);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.15s ease;
+        }
+
+        .fab-arc-item:hover .fab-arc-label {
+            opacity: 1;
+        }
+
+        /* Hub button */
+        #fab-hub {
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background: #0d1520;
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 26px rgba(15, 23, 42, 0.30);
+            transition: background 0.2s ease, transform 0.3s cubic-bezier(0.34, 1.3, 0.64, 1);
+            z-index: 2;
+        }
+
+        #fab-hub:hover {
+            background: #334155;
+        }
+
+        #fab-hub.fab-active {
+            background: #334155;
+            transform: rotate(45deg);
+        }
+
+        .fab-hub-icon {
+            position: absolute;
+            transition: opacity 0.18s ease, transform 0.22s ease;
+        }
+
+        .fab-hub-close {
+            opacity: 0;
+            transform: scale(0.4);
+        }
+
+        #fab-hub.fab-active .fab-hub-open {
+            opacity: 0;
+            transform: scale(0.4);
+        }
+
+        #fab-hub.fab-active .fab-hub-close {
+            opacity: 1;
+            transform: scale(1);
+        }
+    </style>
+
+    <div id="fab-overlay" onclick="closeFab()"></div>
+
+    <div id="fab-container">
+        <!-- Faint arc ring guide -->
+        <div id="fab-ring"></div>
+
+        <!-- WhatsApp — 180° (pure left) -->
+        <a id="fab-wa" class="fab-arc-item"
+            href="https://wa.me/919845056726?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20adaptive%20mobility%20solutions."
+            target="_blank" aria-label="WhatsApp">
+            <span class="fab-arc-label">WhatsApp</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+            </svg>
+        </a>
+
+        <!-- Call — 135° (upper-left diagonal) -->
+        <a id="fab-cal" class="fab-arc-item" href="tel:+919845056726" aria-label="Call">
+            <span class="fab-arc-label">Call Us</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 9.83a19.79 19.79 0 0 1-3-8.59A2 2 0 0 1 3.11 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.99 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+        </a>
+
+        <!-- Email — 90° (straight up) -->
+        <a id="fab-em" class="fab-arc-item" href="mailto:galaxysystembangalore@gmail.com" aria-label="Email">
+            <span class="fab-arc-label">Email Us</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+        </a>
+
+        <!-- Hub button -->
+        <button id="fab-hub" onclick="toggleFab()" aria-label="Contact us" aria-expanded="false">
+            <span class="fab-hub-icon fab-hub-open">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z" />
+                    <path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1" />
+                </svg>
+            </span>
+            <span class="fab-hub-icon fab-hub-close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 6 6 18" />
+                    <path d="m6 6 12 12" />
+                </svg>
+            </span>
+        </button>
+    </div>
+
+    <script>
+        (function () {
+            let fabOpen = false;
+            const hub = document.getElementById('fab-hub');
+            const overlay = document.getElementById('fab-overlay');
+            const ring = document.getElementById('fab-ring');
+            const items = ['fab-wa', 'fab-cal', 'fab-em'].map(id => document.getElementById(id));
+
+            window.toggleFab = function () { fabOpen ? closeFab() : openFab(); };
+
+            function openFab() {
+                fabOpen = true;
+                hub.classList.add('fab-active');
+                hub.setAttribute('aria-expanded', 'true');
+                overlay.classList.add('fab-active');
+                ring.classList.add('fab-active');
+                items.forEach(el => el.classList.add('fab-active'));
+            }
+            window.closeFab = function () {
+                fabOpen = false;
+                hub.classList.remove('fab-active');
+                hub.setAttribute('aria-expanded', 'false');
+                overlay.classList.remove('fab-active');
+                ring.classList.remove('fab-active');
+                items.forEach(el => el.classList.remove('fab-active'));
+            };
+            document.addEventListener('keydown', e => { if (e.key === 'Escape' && fabOpen) closeFab(); });
+        })();
+    </script>
+
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
+    <script>
+        const lenis = new Lenis();
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+    </script>
+</body>
+
+</html>

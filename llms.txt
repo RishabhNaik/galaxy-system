@@ -1,0 +1,109 @@
+# Galaxy System — AI/LLM Readable Content
+
+> Galaxy System is a Bengaluru-based adaptive mobility solutions company specializing in custom vehicle modifications and prosthetic solutions for differently abled individuals.
+
+## About
+
+**Business Name:** Galaxy System
+**Location:** Near Shankar Mutt, Nagapura, Rajajinagar, Bengaluru, Karnataka 560010, India
+**Phone:** +91 98450 56726
+**Email:** galaxysystembangalore@gmail.com
+**Website:** https://galaxysystem.in
+**Founded:** ~2009 (15+ years of experience)
+**Specialization:** Adaptive driving vehicle modifications, prosthetics, orthotics, mobility solutions for differently abled (Divyang) individuals
+
+## Mission
+
+To make mobility more accessible, practical, and empowering for physically challenged individuals across India. Every solution is engineered around safety, comfort, long-term reliability, and personalized customization.
+
+## Core Services
+
+### 1. Automotive Services
+Custom vehicle control systems for individuals with physical mobility challenges.
+
+- **Push and Pull Control**: Custom mechanical push-pull hand control levers enabling full acceleration (pull) and braking (push) without foot pedal operation.
+- **Automatic Electronic Clutch**: Micro-sensor automated clutch management for manual vehicles, eliminating left-leg knee stress and clutch operation in city traffic.
+- **Left Foot Accelerator**: Quick-release pedal transfer mechanism enabling smooth left-leg throttle control while safely blocking the original right pedal.
+- **One Hand Steering**: Ergonomic steering knobs, spinners, and quick-attach steering attachments designed for effortless single-handed vehicle control.
+- **Ring Accelerator & Right Hand Brake**: Under/over steering wheel electronic ring throttle combined with a comfortable right-hand lever brake.
+
+### 2. Types of Orthoses
+Orthoses grouped by the body region they support or their functional design:
+
+- **Foot Orthoses (FOs)**: Shoe inserts and orthotic footwear used to correct foot posture, relieve pain, and distribute weight.
+- **Ankle-Foot Orthoses (AFOs)**: Devices extending from the calf to the foot, commonly used to treat foot drop and stabilize the ankle.
+- **Knee Orthoses (KOs) & KAFOs**: Knee braces (KOs) or devices spanning the hip and foot (KAFOs) to protect ligaments, reduce pain, or support weak muscles.
+- **Spinal Orthoses**: Back and neck braces (e.g., cervical orthoses, TLSOs) utilized to immobilize the spine, correct scoliosis, and protect against fractures.
+- **Upper-Limb Orthoses**: Wrist-hand orthoses (WHOs) or arm splints used to relieve conditions like carpal tunnel syndrome or immobilize joints post-surgery.
+
+### 3. Prostheses
+Artificial device solutions tailored to body geometry and amputation level:
+
+- **Lower-Limb Prostheses**: Includes artificial legs customized by the level of amputation, such as transtibial (below-knee), transfemoral (above-knee), and hip disarticulation.
+- **Upper-Limb Prostheses**: Includes artificial arms, hands, and fingers ranging from cosmetic/passive devices to body-powered hooks and myoelectric (bionic) arms using muscle signals to move.
+- **Exoskeletal vs. Endoskeletal Designs**: Exoskeletal prostheses feature a hard, rigid outer shell shaped like a limb, while endoskeletal models feature a central, adjustable inner skeleton covered by a softer, skin-like material.
+
+## Key Differentiators
+
+- **RTO Approved**: All modifications adhere to national road transport safety guidelines
+- **15+ Years Experience** in adaptive mobility engineering
+- **Safety-Certified**: Pre-delivery safety inspection and road trial on every unit
+- **Personalized**: Every solution designed around individual mobility audit and comfort requirements
+- **Transparent Pricing**: No pushed products; honest estimation-based guidance
+
+## Process
+
+1. Initial Consultation & Mobility Assessment
+2. Solution Recommendation based on individual needs
+3. Custom Fabrication & Installation
+4. Safety Testing & Road Trial
+5. Delivery with Follow-up Support
+
+## Customer Reviews
+
+- **Nagaraj**: "Shivaprasad sir's kind care and quality service made the entire modification process so easy. He gave special attention to fixing the left foot accelerator according to my exact requirements." ★★★★★
+- **Bangarappa K.**: "Excellent quality of service. The electronic clutch automation has significantly reduced driving fatigue on Bengaluru roads." ★★★★★
+- **Shivashankar**: "Highly recommend their wheelchair transfer solutions. The custom steering assistance knob feels very secure." ★★★★★
+
+## Frequently Asked Questions
+
+**Q: Can adaptive driving systems be installed in any car?**
+A: Solutions depend on the vehicle model and the user's individual requirements. The team provides assessment-based recommendations.
+
+**Q: Is training required after installing hand controls?**
+A: Many users may require familiarization and practice to comfortably adapt to new driving controls.
+
+**Q: What is an electronic clutch system?**
+A: An electronic clutch system assists with clutch operation, reducing manual effort during driving.
+
+**Q: Are modifications customized?**
+A: Yes. Every adaptive solution is designed around the user's mobility needs, comfort, and driving requirements.
+
+**Q: Do you provide consultation before modification?**
+A: Yes. Understanding the user's requirements is an important part of the process.
+
+**Q: Is Galaxy System RTO approved?**
+A: Yes. All modifications are compliant with RTO safety certification requirements.
+
+## Pages
+
+- **Homepage** (`/index.html`): Full business overview, services, testimonials, stories, and map
+- **About** (`/about.html`): Company mission, background, and engineering philosophy
+- **Adaptive Driving** (`/solutions/adaptive-mobility.html`): Detailed page for adaptive vehicle modifications
+- **Prosthetics** (`/solutions/prosthetics.html`): Detailed page for prosthetic and orthotic solutions
+- **Stories** (`/stories.html`): Blog/insights on adaptive mobility and real customer journeys
+- **Achievements** (`/achievements.html`): Milestones, certifications, and gallery
+- **FAQ** (`/faq.html`): Common questions about services and process
+- **Contact** (`/contact.html`): Contact form, phone, address, and map
+- **Testimonials** (`/testimonials.html`): Curated real customer reviews
+
+## Contact
+
+**Address:** Near Shankar Mutt, Nagapura, Rajajinagar, Bengaluru, Karnataka 560010
+**Phone:** +91 98450 56726
+**WhatsApp:** https://wa.me/919845056726
+**Email:** galaxysystembangalore@gmail.com
+
+## Tags / Keywords
+
+adaptive driving India, hand controls car India, differently abled car modification Bengaluru, Divyang vehicle modification, left foot accelerator India, electronic clutch system, prosthetics Bengaluru, adaptive mobility solutions, RTO approved vehicle modification, wheelchair accessible vehicle modification Karnataka

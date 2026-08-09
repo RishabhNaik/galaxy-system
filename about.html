@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us — Galaxy System</title>
+    <meta name="description" content="Meet Shivaprasad, founder of Galaxy System — Bengaluru's trusted adaptive mobility specialist with over 30 years of service to the differently abled community.">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="manifest" href="site.webmanifest">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles/global.css">
+</head>
+<body class="min-h-screen flex flex-col bg-[#eef5fa] text-[#0c1a29] selection:bg-[#4B9DCD] selection:text-white">
+
+    <!-- Header -->
+    <header id="main-header"
+        class="fixed top-0 z-50 w-full border-b border-[#0c1a29]/10 bg-[#eef5fa]/90 backdrop-blur-md transition-all duration-300">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-2 lg:px-8 lg:py-3">
+            <a aria-label="Galaxy System home" class="flex items-center gap-3" href="index.html">
+                <img src="galaxy_system_logo.svg" class="h-8 lg:h-10 w-auto" alt="Galaxy System Logo">
+            </a>
+            <div class="hidden items-center gap-8 md:flex">
+                <nav class="flex items-center gap-6">
+                    <a href="index.html" class="nav-link text-sm font-medium text-[#475569] hover:text-[#0c1a29] transition-colors">Home</a>
+                    <a href="index.html#services" class="nav-link text-sm font-medium text-[#475569] hover:text-[#0c1a29] transition-colors">Services</a>
+                    <a href="about.html" class="nav-link text-sm font-semibold text-[#0c1a29] transition-colors">About us</a>
+                    <a href="stories.html" class="nav-link text-sm font-medium text-[#475569] hover:text-[#0c1a29] transition-colors">Insights</a>
+                    <a href="contact.html" class="nav-link text-sm font-medium text-[#475569] hover:text-[#0c1a29] transition-colors">Contact</a>
+                </nav>
+                <a href="contact.html" class="btn-primary items-center justify-center font-semibold transition-all duration-300">
+                    Book Consultation
+                </a>
+            </div>
+            <button id="mobile-menu-btn"
+                class="inline-flex h-10 w-10 items-center justify-center rounded-xl border-transparent text-[#1a2f4a] transition-colors hover:bg-[#4B9DCD]/5 lg:hidden"
+                aria-label="Open menu" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 hidden flex-col bg-[#09101a]/95 backdrop-blur-lg p-6">
+        <div class="flex items-center justify-between mb-8">
+            <img src="galaxy_system_logo.svg" class="h-8 w-auto" alt="Galaxy System Logo">
+            <button id="close-menu-btn" class="h-10 w-10 flex items-center justify-center rounded-xl" aria-label="Close menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-4 text-lg font-medium text-[#1a2f4a]">
+            <a href="index.html" class="hover:text-white py-2">Home</a>
+            <a href="index.html#services" class="hover:text-white py-2">Services</a>
+            <a href="about.html" class="text-white font-semibold py-2">About us</a>
+            <a href="stories.html" class="hover:text-white py-2">Insights</a>
+            <a href="contact.html" class="hover:text-white py-2">Contact</a>
+        </nav>
+    </div>
+
+    <main class="flex-grow pt-12 lg:pt-16">
+
+        <!-- Breadcrumb Strip -->
+        <div class="border-b border-[#0c1a29]/10 bg-[#eef5fa] py-2.5">
+            <div class="mx-auto max-w-7xl px-5 lg:px-8">
+                <nav class="flex text-xs font-medium text-[#475569]" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-2">
+                        <li class="inline-flex items-center">
+                            <a href="index.html" class="hover:text-[#0c1a29] transition-colors flex items-center gap-1.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                                Home
+                            </a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-3 h-3 text-[#94a3b8]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/></svg>
+                            <span class="text-[#0c1a29] font-semibold">About Us</span>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Hero Banner -->
+        <section class="relative overflow-hidden bg-gradient-to-br from-[#d4e5f4] via-[#e5eff8] to-[#f0f6fc] border-b border-[#0c1a29]/10 pt-6 pb-8 lg:pt-8 lg:pb-10">
+            <div class="mx-auto max-w-7xl px-5 lg:px-8">
+                <div class="max-w-3xl">
+                    <span class="section-label">Our Story</span>
+                    <h1 class="text-4xl font-medium leading-[1.08] tracking-tight text-[#0c1a29] font-display sm:text-6xl">
+                        Driven by Purpose,<br>
+                        <span class="text-[#4B9DCD]">Built on Empathy</span>
+                    </h1>
+                    <p class="mt-5 text-base text-[#475569] leading-relaxed max-w-2xl">
+                        Galaxy System was founded by someone who lived the challenge firsthand — and spent three decades turning that personal experience into independence for thousands of others across India.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founder Section -->
+
+        <section class="bg-white border-b border-[#0c1a29]/10 py-14 lg:py-20 bg-dot-pattern bg-mesh-glow relative">
+            <div class="mx-auto max-w-7xl px-5 lg:px-8">
+
+                <!-- Two-column: Text left | Photo right -->
+                <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-start mb-14 lg:mb-20">
+
+                    <!-- Left: Founder Text -->
+                    <div>
+                        <span class="section-label">The Founder</span>
+                        <h2 class="text-3xl font-bold tracking-tight text-[#0c1a29] font-display sm:text-4xl mb-1">
+                            Dr. Shiva Prasad Y B
+                        </h2>
+                        <p class="text-sm text-[#4B9DCD] font-semibold mb-6">Founder & Director, Galaxy System</p>
+
+                        <p class="text-[#475569] leading-relaxed text-sm mb-4">
+                            Dr. Shiva Prasad Y B is the founder and driving force behind Galaxy System. A right lower-limb polio survivor himself, he has experienced firsthand the frustration of navigating a world not designed for differently abled individuals — and the profound freedom that the right adaptive solution can unlock.
+                        </p>
+
+                        <p class="text-[#475569] leading-relaxed text-sm mb-4">
+                            His turning point came in <strong class="text-[#0c1a29]">2008</strong> when he purchased a Hyundai Verna and found virtually no safe, technically reliable, or RTO-compliant adaptive vehicle modification providers in India. He decided to be the solution. In <strong class="text-[#0c1a29]">2009</strong>, he redirected Galaxy System — which had initially operated in computers and peripherals since <strong class="text-[#0c1a29]">1994</strong> — entirely toward adaptive mobility.
+                        </p>
+
+                        <p class="text-[#475569] leading-relaxed text-sm mb-4">
+                            Determined to bring world-class quality to India, Dr. Shiva Prasad pursued international training in <strong class="text-[#0c1a29]">2011</strong> with <strong class="text-[#0c1a29]">Kivi Mobility Freedom SRL, Italy</strong> — a leading European manufacturer of adaptive driving systems. This gave Galaxy System the technical foundation to serve customers with European-standard precision, safety, and care.
+                        </p>
+
+                        <p class="text-[#475569] leading-relaxed text-sm mb-8">
+                            His selfless service has been nationally recognized. He received the <strong class="text-[#0c1a29]">Karma Veera Puraskara (2014)</strong> for outstanding social contribution and an <strong class="text-[#0c1a29]">Honorary Doctorate in Social Service</strong>. He continues to personally work with every customer who visits Galaxy System.
+                        </p>
+
+                        <!-- Award Badges -->
+                        <div class="flex flex-col gap-3">
+                            <div class="flex items-center gap-3 bg-[#f0f6fc] border border-[#4B9DCD]/20 rounded-xl px-4 py-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4B9DCD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                                <div>
+                                    <p class="text-xs font-bold text-[#0c1a29]">Karma Veera Puraskara</p>
+                                    <p class="text-[11px] text-[#475569]">Social Contribution Award, 2014</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 bg-[#f0f6fc] border border-[#4B9DCD]/20 rounded-xl px-4 py-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4B9DCD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                                <div>
+                                    <p class="text-xs font-bold text-[#0c1a29]">Honorary Doctorate</p>
+                                    <p class="text-[11px] text-[#475569]">Social Service Recognition</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 bg-[#f0f6fc] border border-[#4B9DCD]/20 rounded-xl px-4 py-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4B9DCD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/><path d="M3 6h18"/><path d="M3 18h18"/><circle cx="6" cy="12" r="2" fill="#4B9DCD" stroke="none"/><circle cx="18" cy="12" r="2" fill="#4B9DCD" stroke="none"/></svg>
+                                <div>
+                                    <p class="text-xs font-bold text-[#0c1a29]">Sports Vice President</p>
+                                    <p class="text-[11px] text-[#475569]">Railway Committee Member, South Western Railway</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Founder Photo -->
+                    <div class="flex flex-col gap-5">
+                        <!-- Founder Photo -->
+                        <div class="w-full h-[580px] sm:h-[640px] rounded-2xl overflow-hidden relative shadow-md">
+                            <img src="assets/founder.png" alt="Dr. Shiva Prasad Y B" class="w-full h-full object-cover object-top">
+                        </div>
+
+                        <!-- Kivi Italy Badge -->
+                        <div class="bg-[#0c1a29] text-white rounded-2xl px-5 py-4 flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-[#4B9DCD]/20 flex items-center justify-center shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4B9DCD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-white">Kivi Mobility Freedom SRL</p>
+                                <p class="text-xs text-[#94a3b8] mt-0.5">Italy-Certified — European adaptive driving engineering & wheelchair vehicle access.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- About Galaxy System Section -->
+        <section class="mx-auto max-w-7xl px-5 py-14 lg:px-8 lg:py-20">
+            <div class="grid gap-12 lg:grid-cols-2 items-start">
+
+                <!-- What We Are -->
+                <div>
+                    <span class="section-label">About Galaxy System</span>
+                    <h2 class="text-3xl font-bold tracking-tight text-[#0c1a29] font-display sm:text-4xl mb-6">
+                        Bengaluru's Trusted<br>Adaptive Mobility Specialist
+                    </h2>
+
+                    <p class="text-[#475569] leading-relaxed text-sm mb-4">
+                        Galaxy System is a Bengaluru-based mobility solutions provider with over 15 years of specialised experience in custom adaptive driving modifications and advanced prosthetic and orthotic limbs for differently abled individuals across India.
+                    </p>
+
+                    <p class="text-[#475569] leading-relaxed text-sm mb-4">
+                        We are <strong class="text-[#0c1a29]">officially authorised by the Government of Karnataka</strong> to conduct vehicle modifications for disabled persons — ensuring every modification we carry out is fully legal, RTO-compliant, and covered by motor insurance without issue.
+                    </p>
+
+                    <p class="text-[#475569] leading-relaxed text-sm mb-4">
+                        Unlike dealers who sell pre-fabricated, generic equipment, Galaxy System works <strong class="text-[#0c1a29]">directly with each individual customer</strong>. Shivaprasad personally assesses every client and customizes each solution to their specific disability profile, vehicle make, and daily driving needs.
+                    </p>
+
+                    <p class="text-[#475569] leading-relaxed text-sm">
+                        We operate from two locations: our <strong class="text-[#0c1a29]">Nagapura office</strong> (consultation and assessment, near Shankar Mutt) and our <strong class="text-[#0c1a29]">Rajajinagar garage & fabrication workshop</strong> (vehicle modification and fitting). We serve customers from across Karnataka and neighbouring states.
+                    </p>
+                </div>
+
+                <!-- What We Stand For — Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+                    <div class="bg-white border border-[#0c1a29]/10 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-[#4B9DCD]/40 transition-all duration-300 group">
+                        <div class="w-10 h-10 bg-[#eef5fa] text-[#4B9DCD] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h3 class="font-bold text-[#0c1a29] font-display mb-1.5">Government Authorised</h3>
+                        <p class="text-xs text-[#475569] leading-relaxed">Officially licensed by Karnataka Government to perform legal, RTO-compliant adaptive vehicle modifications with insurance coverage.</p>
+                    </div>
+
+                    <div class="bg-white border border-[#0c1a29]/10 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-[#4B9DCD]/40 transition-all duration-300 group">
+                        <div class="w-10 h-10 bg-[#eef5fa] text-[#4B9DCD] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <h3 class="font-bold text-[#0c1a29] font-display mb-1.5">3,000–4,000+ Families Served</h3>
+                        <p class="text-xs text-[#475569] leading-relaxed">Over 15 years of dedicated engineering for differently abled drivers and families across Karnataka and South India.</p>
+                    </div>
+
+                    <div class="bg-white border border-[#0c1a29]/10 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-[#4B9DCD]/40 transition-all duration-300 group">
+                        <div class="w-10 h-10 bg-[#eef5fa] text-[#4B9DCD] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        </div>
+                        <h3 class="font-bold text-[#0c1a29] font-display mb-1.5">1-on-1 Personalized Fit</h3>
+                        <p class="text-xs text-[#475569] leading-relaxed">Every vehicle setup and prosthetic device is custom-tailored to the user's specific anatomical reach, strength, and mobility.</p>
+                    </div>
+
+                    <div class="bg-white border border-[#0c1a29]/10 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-[#4B9DCD]/40 transition-all duration-300 group">
+                        <div class="w-10 h-10 bg-[#eef5fa] text-[#4B9DCD] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <h3 class="font-bold text-[#0c1a29] font-display mb-1.5">30+ Years of Excellence</h3>
+                        <p class="text-xs text-[#475569] leading-relaxed">Three decades of consistent service to the Bengaluru community since 1994, built entirely on safety, trust, and real outcomes.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="bg-gradient-to-br from-[#d4e5f4] via-[#e5eff8] to-[#f0f6fc] border-t border-[#0c1a29]/10 py-14 lg:py-20 text-center">
+            <div class="mx-auto max-w-2xl px-5 lg:px-8">
+                <h2 class="text-3xl font-bold tracking-tight text-[#0c1a29] font-display sm:text-4xl">Ready to Explore Your Options?</h2>
+                <p class="mt-4 text-[#475569] text-base leading-relaxed">
+                    Shivaprasad and the Galaxy System team are available at the Rajajinagar office to personally guide you on what's possible for your vehicle and condition.
+                </p>
+                <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="contact.html" class="btn-primary">Book a Consultation</a>
+                    <a href="tel:+919845056726" class="btn-secondary">Call: +91 98450 56726</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-[rgba(255,255,255,0.06)] bg-[#040a12] py-8 text-sm text-[#546880]">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+            <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-4 lg:gap-10">
+                <div class="flex flex-col gap-4">
+                    <a aria-label="Galaxy System home" class="flex items-center gap-3" href="index.html">
+                        <img src="galaxy_system_logo.svg" class="h-8 w-auto" alt="Galaxy System Logo">
+                    </a>
+                    <p class="text-xs leading-relaxed text-[#94a3b8]">Adaptive driving modifications and vehicle accessibility systems designed around individual comfort, safety, and everyday independence.</p>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <h4 class="font-semibold text-white font-display">Company</h4>
+                    <a href="about.html" class="hover:text-white transition-colors">About Us</a>
+                    <a href="stories.html" class="hover:text-white transition-colors">Insights</a>
+                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-white transition-colors">Terms & Conditions</a>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <h4 class="font-semibold text-white font-display">Solutions</h4>
+                    <a href="solutions/adaptive-mobility.html" class="hover:text-white transition-colors">Adaptive Driving</a>
+                    <a href="solutions/prosthetics.html" class="hover:text-white transition-colors">Prosthetics & Orthotics</a>
+                    <a href="faq.html" class="hover:text-white transition-colors">FAQ Support</a>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <h4 class="font-semibold text-white font-display">Contact Us</h4>
+                    <div class="text-xs text-[#94a3b8] space-y-2">
+                        <div>
+                            <span class="text-[#4B9DCD] font-medium block text-[11px] uppercase tracking-wider">Office (Near Shankar Mutt)</span>
+                            <span>12th 'B' Cross, 13th Main, 2nd Stage,<br>WOC, behind BBMP Office, Ward,<br>Nagapura, Bengaluru, KA 560086</span>
+                        </div>
+                        <div>
+                            <span class="text-[#4B9DCD] font-medium block text-[11px] uppercase tracking-wider mt-1.5">Garage & Workshop</span>
+                            <span>608, Dr Rajkumar Road, Opp. ICICI Bank,<br>2nd Block, Rajajinagar,<br>Bengaluru, KA 560010</span>
+                        </div>
+                    </div>
+                    <a href="tel:+919845056726" class="hover:text-white transition-colors font-semibold text-[#b8c6d4] flex flex-col gap-1 mt-1">
+                        <span>+91 98450 56726</span>
+                        <span>+91 94487 01111</span>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-[rgba(255,255,255,0.06)] pt-8 text-center text-xs">
+                <p>&copy; 2026 Galaxy System. All rights reserved. <a href="privacy.html" class="hover:text-white underline ml-2">Privacy Policy</a> | <a href="terms.html" class="hover:text-white underline ml-1">Terms & Conditions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FAB -->
+    <style>
+        #fab-overlay { position: fixed; inset: 0; z-index: 89; display: none; cursor: default; }
+        #fab-overlay.fab-active { display: block; }
+        #fab-container { position: fixed; bottom: 28px; right: 28px; z-index: 90; width: 62px; height: 62px; }
+        #fab-ring { position: absolute; width: 220px; height: 220px; bottom: 0; right: 0; border-radius: 50%; border: 1.5px solid rgba(30,41,59,0.08); pointer-events: none; opacity: 0; transform: scale(0.6); transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.34,1.4,0.64,1); clip-path: polygon(0% 0%, 50.1% 0%, 50.1% 50.1%, 0% 50.1%); }
+        #fab-ring.fab-active { opacity: 1; transform: scale(1); }
+        .fab-arc-item { position: absolute; top: 6px; left: 6px; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 18px rgba(15,23,42,0.22); cursor: pointer; opacity: 0; transform: translate(0, 0) scale(0.3); transition: transform 0.32s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.22s ease, box-shadow 0.18s ease; pointer-events: none; }
+        .fab-arc-item:hover { box-shadow: 0 6px 24px rgba(15,23,42,0.3); filter: brightness(1.08); }
+        #fab-wa  { background: #25D366; color: white; transition-delay: 0s; }
+        #fab-cal { background: #0d1520; color: white; transition-delay: 0.05s; }
+        #fab-em  { background: #f1f5f9; color: #334155; transition-delay: 0.1s; }
+        #fab-wa.fab-active  { transform: translate(-105px, 0) scale(1); opacity: 1; pointer-events: auto; }
+        #fab-cal.fab-active { transform: translate(-74px, -74px) scale(1); opacity: 1; pointer-events: auto; }
+        #fab-em.fab-active  { transform: translate(0, -105px) scale(1); opacity: 1; pointer-events: auto; }
+        .fab-arc-label { position: absolute; right: calc(100% + 10px); top: 50%; transform: translateY(-50%); background: #0d1520; color: white; font-size: 11.5px; font-weight: 600; padding: 5px 11px; border-radius: 100px; white-space: nowrap; box-shadow: 0 2px 10px rgba(15,23,42,0.2); opacity: 0; pointer-events: none; transition: opacity 0.15s ease; }
+        .fab-arc-item:hover .fab-arc-label { opacity: 1; }
+        #fab-hub { position: absolute; inset: 0; border-radius: 50%; background: #0d1520; color: white; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 26px rgba(15,23,42,0.30); transition: background 0.2s ease, transform 0.3s cubic-bezier(0.34,1.3,0.64,1); z-index: 2; }
+        #fab-hub:hover { background: #334155; }
+        #fab-hub.fab-active { background: #334155; transform: rotate(45deg); }
+        .fab-hub-icon { position: absolute; transition: opacity 0.18s ease, transform 0.22s ease; }
+        .fab-hub-close { opacity: 0; transform: scale(0.4); }
+        #fab-hub.fab-active .fab-hub-open  { opacity: 0; transform: scale(0.4); }
+        #fab-hub.fab-active .fab-hub-close { opacity: 1; transform: scale(1); }
+    </style>
+    <div id="fab-overlay" onclick="closeFab()"></div>
+    <div id="fab-container">
+        <div id="fab-ring"></div>
+        <a id="fab-wa" class="fab-arc-item" href="https://wa.me/919845056726?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20adaptive%20mobility%20solutions." target="_blank" aria-label="WhatsApp">
+            <span class="fab-arc-label">WhatsApp</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        </a>
+        <a id="fab-cal" class="fab-arc-item" href="tel:+919845056726" aria-label="Call">
+            <span class="fab-arc-label">Call Us</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 9.83a19.79 19.79 0 0 1-3-8.59A2 2 0 0 1 3.11 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.99 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </a>
+        <a id="fab-em" class="fab-arc-item" href="mailto:galaxysystembangalore@gmail.com" aria-label="Email">
+            <span class="fab-arc-label">Email Us</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+        <button id="fab-hub" onclick="toggleFab()" aria-label="Contact us" aria-expanded="false">
+            <span class="fab-hub-icon fab-hub-open">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg>
+            </span>
+            <span class="fab-hub-icon fab-hub-close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </span>
+        </button>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        (function () {
+            let fabOpen = false;
+            const hub = document.getElementById('fab-hub');
+            const overlay = document.getElementById('fab-overlay');
+            const ring = document.getElementById('fab-ring');
+            const items = ['fab-wa', 'fab-cal', 'fab-em'].map(id => document.getElementById(id));
+            window.toggleFab = function () { fabOpen ? closeFab() : openFab(); };
+            function openFab() { fabOpen = true; hub.classList.add('fab-active'); hub.setAttribute('aria-expanded', 'true'); overlay.classList.add('fab-active'); ring.classList.add('fab-active'); items.forEach(el => el.classList.add('fab-active')); }
+            window.closeFab = function () { fabOpen = false; hub.classList.remove('fab-active'); hub.setAttribute('aria-expanded', 'false'); overlay.classList.remove('fab-active'); ring.classList.remove('fab-active'); items.forEach(el => el.classList.remove('fab-active')); };
+            document.addEventListener('keydown', e => { if (e.key === 'Escape' && fabOpen) closeFab(); });
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+# Galaxy System — AI/LLM Readable Content Specification (llms.txt)
+
+> Galaxy System is Bengaluru's leading adaptive mobility engineering specialist, providing custom RTO-approved vehicle modifications (push-pull hand controls, electronic auto-clutch systems, left-foot accelerators, swivel seat transfers) and custom prosthetic & orthotic limbs for physically challenged drivers.
+
+## Executive Summary
+
+- **Organization Name**: Galaxy System
+- **Founder & Director**: Dr. Shiva Prasad Y B (Karma Veera Puraskara Honoree, Polio Survivor, Kivi Italy Trained Mobility Specialist)
+- **Headquarters & Office**: Near Shankar Mutt, Nagapura, Rajajinagar, Bengaluru, Karnataka 560010, India
+- **Workshop Bay**: Rajajinagar Garage & Fabrication Workshop, Bengaluru, KA 560010
+- **Direct Phone & Helpline**: +91 98450 56726
+- **WhatsApp Support**: https://wa.me/919845056726
+- **Email Contact**: info@galaxysystem.in | galaxysystembangalore@gmail.com
+- **Official Website**: https://galaxysystem.in
+- **Operating Hours**: Monday to Saturday: 9:30 AM to 5:00 PM IST
+- **Primary Service Area**: Bengaluru, Karnataka, Tamil Nadu, Andhra Pradesh, Telangana, Kerala, and pan-India
+
+## Core Competencies & Solutions
+
+### 1. Hand-Operated Driving Controls
+- **Mechanics**: Single-lever mechanical push-pull steel linkages mounted near the steering column.
+- **Function**: Push forward to brake, pull back to accelerate. Zero electronic lag.
+- **Pedal Compatibility**: Retains original OEM foot pedals for dual-use driving by non-disabled family members.
+- **Options**: Integrated horn, turn indicator, and headlight dip switches on the lever grip.
+
+### 2. Electronic Auto-Clutch Systems
+- **Mechanics**: Microprocessor-controlled servo actuator operating the manual car clutch.
+- **Activation**: Gear stick touch sensor automatically disengages the clutch during gear shifts.
+- **Features**: Includes anti-stall creep control for heavy Bengaluru city traffic and a dashboard toggle switch for standard foot-clutch operation.
+
+### 3. Left-Foot Accelerator Assemblies
+- **Mechanics**: Quick-release transfer pedal unit for drivers with right lower-limb immobility or stroke recovery.
+- **Safety**: Includes a heavy-duty right accelerator safety guard block to prevent accidental pedal depression. Detaches in seconds without tools.
+
+### 4. Wheelchair Swivel Transfers & Accessibility
+- **Mechanics**: 90-degree outward swivel passenger seats, wheelchair loading ramps, and hoist mechanisms.
+- **Vehicle Compatibility**: Hatchbacks, sedans, compact SUVs, MPVs (Maruti, Hyundai, Tata, Honda, Mahindra, Toyota).
+
+### 5. Custom Prosthetics & Orthotics
+- **Solutions**: Custom endoskeletal modular leg prostheses, myoelectric arm prostheses, carbon-fiber AFO/KAFO calipers, and postural spinal bracing.
+- **Casting**: Anatomically cast sockets molded under Dr. Shiva Prasad's supervision.
+
+## Regulatory Compliance & RTO Approval
+
+- **Authorization**: Officially recognized and certified by the Karnataka State Transport Department (RTO).
+- **Insurance Continuity**: Modifications qualify for full motor insurance endorsement without policy invalidation.
+- **Non-Destructive Fabrication**: Preserves factory vehicle chassis strength and safety crash zones.
+
+## Founder Background — Dr. Shiva Prasad Y B
+
+- Polio survivor who turned personal driving challenges into an empowering enterprise in 2009.
+- Received specialized technical training in Italy with **Kivi Mobility Freedom SRL** in 2011.
+- Awarded **Karma Veera Puraskara (2014)** and an Honorary Doctorate in Social Service.
+- Personally conducts physical movement range audits for every client at the Bengaluru workshop.
+
+## Navigation & Page Index
+
+- **Home**: `https://galaxysystem.in/`
+- **About Us**: `https://galaxysystem.in/about`
+- **Adaptive Vehicle Mobility**: `https://galaxysystem.in/solutions/adaptive-mobility`
+- **Prosthetics & Orthotics**: `https://galaxysystem.in/solutions/prosthetics`
+- **Modifications Gallery**: `https://galaxysystem.in/gallery`
+- **Mobility Stories**: `https://galaxysystem.in/stories`
+- **FAQ & Guidance**: `https://galaxysystem.in/faq`
+- **Book Consultation**: `https://galaxysystem.in/contact`
+- **Privacy Policy**: `https://galaxysystem.in/privacy`
+- **Terms of Service**: `https://galaxysystem.in/terms`

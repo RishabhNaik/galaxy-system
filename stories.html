@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Insights — Galaxy System</title>
+    <meta name="description" content="Practical guides, driver tips, vehicle selection advice, and community stories about adaptive driving and prosthetics from Galaxy System.">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="manifest" href="site.webmanifest">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles/global.css">
+</head>
+<body class="min-h-screen flex flex-col bg-[#eef5fa] text-[#0c1a29] selection:bg-[#4B9DCD] selection:text-white">
+
+    <!-- Header Section -->
+    <header id="main-header"
+        class="fixed top-0 z-50 w-full border-b border-[#0c1a29]/10 bg-[#eef5fa]/90 backdrop-blur-md transition-all duration-300">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-2 lg:px-8 lg:py-3">
+            <!-- Logo -->
+            <a aria-label="Galaxy System home" class="flex items-center gap-3" href="index.html">
+                <img src="galaxy_system_logo.svg" class="h-8 lg:h-10 w-auto" alt="Galaxy System Logo">
+            </a>
+
+            <!-- Navigation Links & CTAs -->
+            <div class="hidden items-center gap-8 md:flex">
+                <nav class="flex items-center gap-6">
+                    <a href="index.html" class="nav-link text-sm font-medium text-[#475569] hover:text-[#0c1a29] transition-colors">Home</a>
+                    <a href="index.html#services" class="nav-link text-sm font-medium text-[#475569] hover:text-[#0c1a29] transition-colors">Services</a>
+                    <a href="about.html" class="nav-link text-sm font-medium text-[#475569] hover:text-[#0c1a29] transition-colors">About us</a>
+                    <a href="stories.html" class="nav-link text-sm font-semibold text-[#0c1a29] transition-colors">Insights</a>
+                    <a href="contact.html" class="nav-link text-sm font-medium text-[#475569] hover:text-[#0c1a29] transition-colors">Contact</a>
+                </nav>
+
+                <a id="nav-cta" href="contact.html"
+                    class="btn-primary items-center justify-center font-semibold transition-all duration-300">
+                    Book Consultation
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn"
+                class="inline-flex h-10 w-10 items-center justify-center rounded-xl border-transparent text-[#1a2f4a] transition-colors hover:bg-[#4B9DCD]/5 lg:hidden"
+                aria-label="Open menu" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 5h16"></path>
+                    <path d="M4 12h16"></path>
+                    <path d="M4 19h16"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Overlay Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 hidden flex-col bg-[#09101a]/95 backdrop-blur-lg p-6">
+        <div class="flex items-center justify-between mb-8">
+            <img src="galaxy_system_logo.svg" class="h-8 w-auto" alt="Galaxy System Logo">
+            <button id="close-menu-btn"
+                class="h-10 w-10 flex items-center justify-center rounded-xl border-transparent text-[#1a2f4a]" aria-label="Close menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-4 text-lg font-medium text-[#1a2f4a]">
+            <a href="index.html" class="hover:text-white py-2">Home</a>
+            <a href="index.html#services" class="hover:text-white py-2">Services</a>
+            <a href="about.html" class="hover:text-white py-2">About us</a>
+            <a href="stories.html" class="text-white font-semibold py-2">Insights</a>
+            <a href="contact.html" class="hover:text-white py-2">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-12 lg:pt-16">
+
+        <!-- Attached Sub-Navbar Breadcrumb Strip -->
+        <div class="border-b border-[#0c1a29]/10 bg-[#eef5fa] py-2.5">
+            <div class="mx-auto max-w-7xl px-5 lg:px-8">
+                <nav class="flex text-xs font-medium text-[#475569]" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-2">
+                        <li class="inline-flex items-center">
+                            <a href="index.html" class="hover:text-[#0c1a29] transition-colors flex items-center gap-1.5 text-[#475569]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                                Home
+                            </a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-3 h-3 text-[#94a3b8]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/></svg>
+                            <span class="text-[#0c1a29] font-semibold">Insights</span>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden bg-gradient-to-br from-[#d4e5f4] via-[#e5eff8] to-[#f0f6fc] border-b border-[#0c1a29]/10 py-10 lg:py-16 text-[#0c1a29]">
+            <div class="mx-auto max-w-7xl px-5 lg:px-8">
+                <div class="max-w-3xl">
+                    <span class="section-label">Resources & Articles</span>
+                    <h1 class="text-4xl font-medium leading-[1.08] tracking-tight text-[#0c1a29] font-display sm:text-6xl">
+                        Mobility Insights, <br>
+                        <span class="text-[#4B9DCD]">Guides & Tips</span>
+                    </h1>
+                    <p class="mt-5 text-base text-[#475569] leading-relaxed max-w-2xl font-normal">
+                        Practical advice, vehicle adaptation tips, technical guidance, and real-life stories from disabled drivers and prosthetic users across India.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Article Section -->
+        <section class="bg-white border-b border-[#0c1a29]/10 py-12 lg:py-16">
+            <div class="mx-auto max-w-7xl px-5 lg:px-8">
+                <span class="section-label">Featured Insight</span>
+                
+                <a href="#" class="group grid lg:grid-cols-[1.1fr_1fr] gap-8 items-center bg-[#f8fafc] border border-slate-200 rounded-2xl overflow-hidden p-6 lg:p-8 shadow-sm hover:shadow-md transition duration-300">
+                    <div class="h-80 w-full rounded-xl bg-gradient-to-br from-[#0c1a29] via-[#102338] to-[#1e3a5f] relative overflow-hidden flex items-end p-8">
+                        <div class="relative z-10">
+                            <span class="text-xs font-bold text-[#4B9DCD] bg-[#0c1a29]/80 border border-white/20 px-3 py-1 rounded-md uppercase tracking-wider block mb-3">Vehicle Adaptation Guide</span>
+                            <p class="text-slate-300 text-xs font-semibold uppercase tracking-wider">Cover Story · 8 min read</p>
+                        </div>
+                    </div>
+                    <div class="text-left">
+                        <h2 class="text-2xl lg:text-3.5xl font-bold text-[#0c1a29] font-display leading-tight group-hover:text-[#4B9DCD] transition-colors">
+                            How Adaptive Hand Controls Give Differently Abled Drivers Full Control on Indian Roads
+                        </h2>
+                        <p class="mt-4 text-[#475569] text-sm leading-relaxed">
+                            India's traffic conditions demand sharp reflexes and precise lever ergonomics. For drivers with lower limb mobility challenges, custom push-pull hand controls from Galaxy System are engineered to make every drive safer, more comfortable, and truly independent.
+                        </p>
+                        <div class="mt-6 flex items-center gap-4 text-xs text-[#475569]">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 rounded-full bg-[#e2edf6] text-[#0c1a29] font-bold flex items-center justify-center">GS</div>
+                                <span class="font-semibold text-[#0c1a29]">Galaxy System Team</span>
+                            </div>
+                            <span>·</span>
+                            <span>July 2026</span>
+                        </div>
+                        <div class="mt-6 inline-flex items-center gap-2 text-xs font-bold text-[#0c1a29] group-hover:text-[#4B9DCD] group-hover:gap-3 transition-all">
+                            Read Full Article &rarr;
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Tag Filters & Articles Grid Section -->
+        <section class="mx-auto max-w-7xl px-5 py-12 lg:px-8 lg:py-20">
+            <div class="mb-8 flex items-center justify-between flex-wrap gap-4">
+                <div>
+                    <span class="section-label">Browse Topics</span>
+                    <h2 class="text-2xl font-bold text-[#0c1a29] font-display sm:text-3xl">All Articles & Guides</h2>
+                </div>
+
+                <!-- Filter Tags -->
+                <div class="flex items-center gap-2 flex-wrap">
+                    <button class="tag-btn active text-xs font-semibold px-3.5 py-1.5 rounded-lg border border-[#0c1a29]/15 bg-[#0c1a29] text-white transition cursor-pointer" data-tag="all">All Topics</button>
+                    <button class="tag-btn text-xs font-semibold px-3.5 py-1.5 rounded-lg border border-[#0c1a29]/15 bg-white text-[#475569] hover:text-[#0c1a29] hover:bg-[#e2edf6] transition cursor-pointer" data-tag="adaptive-driving">Adaptive Driving</button>
+                    <button class="tag-btn text-xs font-semibold px-3.5 py-1.5 rounded-lg border border-[#0c1a29]/15 bg-white text-[#475569] hover:text-[#0c1a29] hover:bg-[#e2edf6] transition cursor-pointer" data-tag="prosthetics">Prosthetics</button>
+                    <button class="tag-btn text-xs font-semibold px-3.5 py-1.5 rounded-lg border border-[#0c1a29]/15 bg-white text-[#475569] hover:text-[#0c1a29] hover:bg-[#e2edf6] transition cursor-pointer" data-tag="guide">Driver Guides</button>
+                    <button class="tag-btn text-xs font-semibold px-3.5 py-1.5 rounded-lg border border-[#0c1a29]/15 bg-white text-[#475569] hover:text-[#0c1a29] hover:bg-[#e2edf6] transition cursor-pointer" data-tag="story">User Stories</button>
+                </div>
+            </div>
+
+            <!-- Articles Grid -->
+            <div id="stories-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Card 1 -->
+                <article class="bg-white border border-[#0c1a29]/10 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 group" data-tags="adaptive-driving guide">
+                    <a href="#" class="block p-6">
+                        <span class="text-[11px] font-bold text-[#4B9DCD] uppercase tracking-wider block mb-2">Driver Guide · 5 min read</span>
+                        <h3 class="text-lg font-bold text-[#0c1a29] font-display leading-snug group-hover:text-[#4B9DCD] transition-colors mb-3">
+                            How Hand Controls Changed My Daily Commute
+                        </h3>
+                        <p class="text-xs text-[#475569] leading-relaxed mb-6">
+                            A first-person account of adapting to custom push-pull hand controls and regaining the freedom to drive independently every day.
+                        </p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100 text-xs">
+                            <span class="text-[#475569]">May 2026</span>
+                            <span class="font-bold text-[#0c1a29] group-hover:text-[#4B9DCD] transition-colors">Read &rarr;</span>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="bg-white border border-[#0c1a29]/10 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 group" data-tags="prosthetics story">
+                    <a href="#" class="block p-6">
+                        <span class="text-[11px] font-bold text-[#4B9DCD] uppercase tracking-wider block mb-2">Customer Story · 4 min read</span>
+                        <h3 class="text-lg font-bold text-[#0c1a29] font-display leading-snug group-hover:text-[#4B9DCD] transition-colors mb-3">
+                            Walking Again: A Young Professional's Journey With Prosthetic Support
+                        </h3>
+                        <p class="text-xs text-[#475569] leading-relaxed mb-6">
+                            How a customized 3D-scanned socket and modular prosthetic limb from Galaxy System helped a young IT professional return to active work life.
+                        </p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100 text-xs">
+                            <span class="text-[#475569]">April 2026</span>
+                            <span class="font-bold text-[#0c1a29] group-hover:text-[#4B9DCD] transition-colors">Read &rarr;</span>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="bg-white border border-[#0c1a29]/10 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 group" data-tags="adaptive-driving guide">
+                    <a href="#" class="block p-6">
+                        <span class="text-[11px] font-bold text-[#4B9DCD] uppercase tracking-wider block mb-2">Technical Guide · 6 min read</span>
+                        <h3 class="text-lg font-bold text-[#0c1a29] font-display leading-snug group-hover:text-[#4B9DCD] transition-colors mb-3">
+                            Understanding Automatic Clutch Systems for Manual Cars
+                        </h3>
+                        <p class="text-xs text-[#475569] leading-relaxed mb-6">
+                            A practical breakdown of how electronic gear knob sensors work, who benefits most, and what the installation process looks like.
+                        </p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100 text-xs">
+                            <span class="text-[#475569]">March 2026</span>
+                            <span class="font-bold text-[#0c1a29] group-hover:text-[#4B9DCD] transition-colors">Read &rarr;</span>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="bg-white border border-[#0c1a29]/10 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 group" data-tags="story">
+                    <a href="#" class="block p-6">
+                        <span class="text-[11px] font-bold text-[#4B9DCD] uppercase tracking-wider block mb-2">User Experience · 3 min read</span>
+                        <h3 class="text-lg font-bold text-[#0c1a29] font-display leading-snug group-hover:text-[#4B9DCD] transition-colors mb-3">
+                            "I Drive to Work Every Day Now" — Ramesh's Story
+                        </h3>
+                        <p class="text-xs text-[#475569] leading-relaxed mb-6">
+                            After a leg injury, Ramesh thought long-distance driving was no longer possible. A pre-purchase vehicle assessment at Galaxy System changed everything.
+                        </p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100 text-xs">
+                            <span class="text-[#475569]">February 2026</span>
+                            <span class="font-bold text-[#0c1a29] group-hover:text-[#4B9DCD] transition-colors">Read &rarr;</span>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="bg-white border border-[#0c1a29]/10 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 group" data-tags="prosthetics guide">
+                    <a href="#" class="block p-6">
+                        <span class="text-[11px] font-bold text-[#4B9DCD] uppercase tracking-wider block mb-2">Clinical Guide · 7 min read</span>
+                        <h3 class="text-lg font-bold text-[#0c1a29] font-display leading-snug group-hover:text-[#4B9DCD] transition-colors mb-3">
+                            Choosing the Right Prosthetic: What Families Should Know First
+                        </h3>
+                        <p class="text-xs text-[#475569] leading-relaxed mb-6">
+                            A comprehensive guide on evaluating prosthetic options, key socket fitting factors, and why gait rehabilitation training is essential.
+                        </p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100 text-xs">
+                            <span class="text-[#475569]">January 2026</span>
+                            <span class="font-bold text-[#0c1a29] group-hover:text-[#4B9DCD] transition-colors">Read &rarr;</span>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Card 6 -->
+                <article class="bg-white border border-[#0c1a29]/10 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 group" data-tags="adaptive-driving story">
+                    <a href="#" class="block p-6">
+                        <span class="text-[11px] font-bold text-[#4B9DCD] uppercase tracking-wider block mb-2">Vehicle Control · 5 min read</span>
+                        <h3 class="text-lg font-bold text-[#0c1a29] font-display leading-snug group-hover:text-[#4B9DCD] transition-colors mb-3">
+                            Left-Foot Accelerator: A Practical Solution for Right Leg Limitation
+                        </h3>
+                        <p class="text-xs text-[#475569] leading-relaxed mb-6">
+                            Many drivers don't realize left-foot accelerators exist. We explain how the quick-release plate works and who benefits most.
+                        </p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100 text-xs">
+                            <span class="text-[#475569]">December 2025</span>
+                            <span class="font-bold text-[#0c1a29] group-hover:text-[#4B9DCD] transition-colors">Read &rarr;</span>
+                        </div>
+                    </a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Consultation Banner -->
+        <section class="bg-gradient-to-br from-[#d4e5f4] via-[#e5eff8] to-[#f0f6fc] py-12 lg:py-20 border-t border-[#0c1a29]/10 text-center">
+            <div class="mx-auto max-w-7xl px-5 lg:px-8 max-w-3xl">
+                <h2 class="text-3xl font-bold tracking-tight text-[#0c1a29] font-display sm:text-4xl">Have a Question or Need Mobility Guidance?</h2>
+                <p class="mt-4 text-[#475569] text-base leading-relaxed">
+                    Our team of mobility specialists and engineers at Rajajinagar, Bengaluru are available to guide you on vehicle selection and custom adaptations.
+                </p>
+                <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="contact.html" class="btn-primary">Book Consultation</a>
+                    <a href="tel:+919845056726" class="btn-secondary">Call Workshop: +91 98450 56726</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="border-t border-[rgba(255,255,255,0.06)] bg-[#040a12] py-8 text-sm text-[#546880]">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+            <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-4 lg:gap-10">
+                <!-- Branding -->
+                <div class="flex flex-col gap-4">
+                    <a aria-label="Galaxy System home" class="flex items-center gap-3" href="index.html">
+                        <img src="galaxy_system_logo.svg" class="h-8 w-auto" alt="Galaxy System Logo">
+                    </a>
+                    <p class="text-xs leading-relaxed text-[#94a3b8]">
+                        Adaptive driving modifications and vehicle entry accessibility systems designed around individual comfort, safety, and everyday independence.
+                    </p>
+                </div>
+                <!-- Links: Company -->
+                <div class="flex flex-col gap-3">
+                    <h4 class="font-semibold text-white font-display">Company</h4>
+                    <a href="about.html" class="hover:text-white transition-colors">About Us</a>
+                    <a href="stories.html" class="hover:text-white transition-colors text-white font-semibold">Insights</a>
+                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-white transition-colors">Terms & Conditions</a>
+                </div>
+                <!-- Links: Solutions -->
+                <div class="flex flex-col gap-3">
+                    <h4 class="font-semibold text-white font-display">Solutions</h4>
+                    <a href="solutions/adaptive-mobility.html" class="hover:text-white transition-colors">Adaptive Driving</a>
+                    <a href="solutions/prosthetics.html" class="hover:text-white transition-colors">Prosthetics & Orthotics</a>
+                    <a href="faq.html" class="hover:text-white transition-colors">FAQ Support</a>
+                </div>
+                <!-- Links: Contact -->
+                <div class="flex flex-col gap-3">
+                    <h4 class="font-semibold text-white font-display">Contact Us</h4>
+                    <div class="text-xs text-[#94a3b8] space-y-2">
+                        <div>
+                            <span class="text-[#4B9DCD] font-medium block text-[11px] uppercase tracking-wider">Office (Near Shankar Mutt)</span>
+                            <span>12th 'B' Cross, 13th Main, 2nd Stage,<br>WOC, behind BBMP Office, Ward,<br>Nagapura, Bengaluru, KA 560086</span>
+                        </div>
+                        <div>
+                            <span class="text-[#4B9DCD] font-medium block text-[11px] uppercase tracking-wider mt-1.5">Garage & Workshop</span>
+                            <span>608, Dr Rajkumar Road, Opp. ICICI Bank,<br>2nd Block, Rajajinagar,<br>Bengaluru, KA 560010</span>
+                        </div>
+                    </div>
+                    <a href="tel:+919845056726" class="hover:text-white transition-colors font-semibold text-[#b8c6d4] flex flex-col gap-1 mt-1">
+                        <span>+91 98450 56726</span>
+                        <span>+91 94487 01111</span>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-[rgba(255,255,255,0.06)] pt-8 text-center text-xs">
+                <p>&copy; 2026 Galaxy System. All rights reserved. <a href="privacy.html" class="hover:text-white underline ml-2">Privacy Policy</a> | <a href="terms.html" class="hover:text-white underline ml-1">Terms & Conditions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Tag filter logic
+        const tagBtns = document.querySelectorAll('.tag-btn');
+        const cards = document.querySelectorAll('#stories-grid article');
+        tagBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tagBtns.forEach(b => {
+                    b.classList.remove('bg-[#0c1a29]', 'text-white');
+                    b.classList.add('bg-white', 'text-[#475569]');
+                });
+                btn.classList.remove('bg-white', 'text-[#475569]');
+                btn.classList.add('bg-[#0c1a29]', 'text-white');
+                const tag = btn.dataset.tag;
+                cards.forEach(card => {
+                    if (tag === 'all' || card.dataset.tags.includes(tag)) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

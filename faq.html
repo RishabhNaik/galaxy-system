@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Frequently Asked Questions — Galaxy System</title>
+    <meta name="description" content="Read answers to common questions about Galaxy System' vehicle modifications, left foot accelerators, hand controls, and electronic clutch systems.">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="manifest" href="site.webmanifest">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/global.css">
+</head>
+<body class="min-h-screen flex flex-col bg-[#09101a] text-white">
+
+        <!-- Header Section -->
+    <header class="fixed top-0 z-50 w-full border-b border-white/10 bg-[#09101a]/90 backdrop-blur-md transition-all duration-300">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 lg:px-8 lg:py-7">
+            <!-- Logo -->
+            <a aria-label="Galaxy System home" class="flex items-center" href="index.html">
+                <img src="galaxy_system_logo.svg" class="h-8 lg:h-10 w-auto" alt="Galaxy System Logo">
+            </a>
+            
+            <!-- Navigation -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="index.html" class="text-sm font-medium text-[#94a3b8] hover:text-white transition-colors">Home</a>
+                <a href="index.html#services" class="text-sm font-medium text-[#94a3b8] hover:text-white transition-colors">Services</a>
+                <a href="about.html" class="text-sm font-medium text-[#94a3b8] hover:text-white transition-colors">About us</a>
+                <a href="stories.html" class="text-sm font-medium text-[#94a3b8] hover:text-white transition-colors">Stories</a>
+                <a href="faq.html" class="text-sm font-medium text-white font-semibold transition-colors">FAQs</a>
+                <a href="contact.html" class="text-sm font-medium text-[#94a3b8] hover:text-white transition-colors">Contact</a>
+            </nav>
+            
+            <!-- CTAs -->
+            <div class="flex items-center gap-6">
+                <a href="tel:+919845056726" class="hidden text-sm font-medium text-white transition-colors hover:text-white md:inline-block">
+                    Call: +91 98450 56726
+                </a>
+                <a href="contact.html" class="btn-primary !hidden h-10 lg:!inline-flex">
+                    Book Consultation
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="inline-flex h-10 w-10 items-center justify-center rounded-xl border-transparent text-[#1a2f4a] transition-colors hover:bg-[#4B9DCD]/5 lg:hidden" aria-label="Open menu" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Overlay Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 hidden flex-col bg-[#09101a]/95 backdrop-blur-lg p-6">
+        <div class="flex items-center justify-between mb-8">
+            <img src="galaxy_system_logo.svg" class="h-8 w-auto" alt="Galaxy System Logo">
+            <button id="close-menu-btn" class="h-10 w-10 flex items-center justify-center rounded-xl border-transparent text-[#1a2f4a]" aria-label="Close menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-4 text-lg font-medium text-[#1a2f4a]">
+            <a href="index.html" class="hover:text-white py-2 border-b border-transparent">Home</a>
+            <a href="index.html#services" class="hover:text-white py-2 border-b border-transparent">Services</a>
+            <a href="about.html" class="hover:text-white py-2 border-b border-transparent">About us</a>
+            <a href="stories.html" class="hover:text-white py-2 border-b border-transparent">Stories</a>
+            <a href="faq.html" class="text-white font-semibold py-2 border-b border-transparent">FAQs</a>
+            <a href="contact.html" class="hover:text-white py-2 border-b border-transparent">Contact</a>
+        </nav>
+        <div class="mt-auto flex flex-col gap-4">
+            <a href="tel:+919845056726" class="py-3 border-transparent text-[#1a2f4a] text-center rounded-xl hover:bg-[#4B9DCD]/5">
+                Call Us
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-8 lg:pt-20">
+        
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden tech-grid py-6 lg:py-10 border-b border-transparent">
+            <div class="mx-auto max-w-7xl px-5 lg:px-8">
+                <div class="max-w-3xl">
+                    <span class="section-label">Support Center</span>
+                    <h1 class="mt-6 text-4xl font-normal leading-[1.05] tracking-tight text-white font-display sm:text-6xl">
+                        Common Questions, <br>
+                        <span class="text-white">Answered.</span>
+                    </h1>
+                    <p class="mt-6 text-lg leading-relaxed text-[#94a3b8]">
+                        Find answers to common questions regarding customized vehicle modifications, installation processes, hand controls, and consultation guidance.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed FAQ List -->
+        <section class="mx-auto max-w-4xl px-5 py-10 lg:px-8 lg:py-32">
+            <div class="flex flex-col gap-4">
+                
+                <!-- Q1 -->
+                <div class="border-b border-[rgba(13,28,46,0.09)] transition-all duration-300" data-faq-item data-state="closed">
+                    <button class="flex w-full items-center justify-between py-6 text-left" data-faq-trigger>
+                        <span class="font-semibold text-white font-display text-base md:text-lg">Can adaptive driving systems be installed in any car?</span>
+                        <span class="ml-4 flex h-6 w-6 shrink-0 items-center justify-center text-[#94a3b8] transition-transform duration-300" data-faq-icon>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </span>
+                    </button>
+                    <div class="max-h-0 overflow-hidden transition-all duration-300 ease-out" data-faq-content>
+                        <div class="pb-6 text-sm leading-relaxed text-[#94a3b8]">
+                            Solutions depend on the vehicle model and the user's individual requirements. Our engineering team provides custom assessment-based recommendations for most hatchbacks, sedans, SUVs, and automatic/manual vehicles.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="border-b border-[rgba(13,28,46,0.09)] transition-all duration-300" data-faq-item data-state="closed">
+                    <button class="flex w-full items-center justify-between py-6 text-left" data-faq-trigger>
+                        <span class="font-semibold text-white font-display text-base md:text-lg">Is training required after installing hand controls?</span>
+                        <span class="ml-4 flex h-6 w-6 shrink-0 items-center justify-center text-[#94a3b8] transition-transform duration-300" data-faq-icon>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </span>
+                    </button>
+                    <div class="max-h-0 overflow-hidden transition-all duration-300 ease-out" data-faq-content>
+                        <div class="pb-6 text-sm leading-relaxed text-[#94a3b8]">
+                            Yes. Many users require some familiarization and practice to comfortably and safely adapt to new driving controls. We guide you through the initial testing phase in a safe, controlled environment to ensure complete confidence.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="border-b border-[rgba(13,28,46,0.09)] transition-all duration-300" data-faq-item data-state="closed">
+                    <button class="flex w-full items-center justify-between py-6 text-left" data-faq-trigger>
+                        <span class="font-semibold text-white font-display text-base md:text-lg">What is an electronic clutch system?</span>
+                        <span class="ml-4 flex h-6 w-6 shrink-0 items-center justify-center text-[#94a3b8] transition-transform duration-300" data-faq-icon>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </span>
+                    </button>
+                    <div class="max-h-0 overflow-hidden transition-all duration-300 ease-out" data-faq-content>
+                        <div class="pb-6 text-sm leading-relaxed text-[#94a3b8]">
+                            An electronic clutch system assists with clutch operation in manual vehicles. It automates the clutch engagement using a switch or sensor on the gear lever, allowing the driver to change gears without using their left leg, significantly reducing manual driving effort and fatigue.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="border-b border-[rgba(13,28,46,0.09)] transition-all duration-300" data-faq-item data-state="closed">
+                    <button class="flex w-full items-center justify-between py-6 text-left" data-faq-trigger>
+                        <span class="font-semibold text-white font-display text-base md:text-lg">Are vehicle modifications customized?</span>
+                        <span class="ml-4 flex h-6 w-6 shrink-0 items-center justify-center text-[#94a3b8] transition-transform duration-300" data-faq-icon>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </span>
+                    </button>
+                    <div class="max-h-0 overflow-hidden transition-all duration-300 ease-out" data-faq-content>
+                        <div class="pb-6 text-sm leading-relaxed text-[#94a3b8]">
+                            Yes. Every adaptive mobility solution is designed and fabricated around the specific user's physical needs, range of movement, comfort preference, and driving safety requirements.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="border-b border-[rgba(13,28,46,0.09)] transition-all duration-300" data-faq-item data-state="closed">
+                    <button class="flex w-full items-center justify-between py-6 text-left" data-faq-trigger>
+                        <span class="font-semibold text-white font-display text-base md:text-lg">Which car should I buy for adaptive modifications?</span>
+                        <span class="ml-4 flex h-6 w-6 shrink-0 items-center justify-center text-[#94a3b8] transition-transform duration-300" data-faq-icon>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </span>
+                    </button>
+                    <div class="max-h-0 overflow-hidden transition-all duration-300 ease-out" data-faq-content>
+                        <div class="pb-6 text-sm leading-relaxed text-[#94a3b8]">
+                            We strongly recommend consulting Galaxy System <em>before</em> buying a car. By examining your medical certificate and physical range first, we can recommend a vehicle model (automatic/manual, cabin space, pedal layout) that reduces modification costs and guarantees optimal ergonomics.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q6 -->
+                <div class="border-b border-[rgba(13,28,46,0.09)] transition-all duration-300" data-faq-item data-state="closed">
+                    <button class="flex w-full items-center justify-between py-6 text-left" data-faq-trigger>
+                        <span class="font-semibold text-white font-display text-base md:text-lg">Are universal or ready-made prosthetics available?</span>
+                        <span class="ml-4 flex h-6 w-6 shrink-0 items-center justify-center text-[#94a3b8] transition-transform duration-300" data-faq-icon>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </span>
+                    </button>
+                    <div class="max-h-0 overflow-hidden transition-all duration-300 ease-out" data-faq-content>
+                        <div class="pb-6 text-sm leading-relaxed text-[#94a3b8]">
+                            No. A common misconception is that prosthetics or orthotics can be bought off-the-shelf. Every device must be custom-fabricated for the individual after thorough clinical casting or scanning. Additionally, every user undergoes a mandatory practice and gait training period of several days after receiving their device.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q7 -->
+                <div class="border-b border-[rgba(13,28,46,0.09)] transition-all duration-300" data-faq-item data-state="closed">
+                    <button class="flex w-full items-center justify-between py-6 text-left" data-faq-trigger>
+                        <span class="font-semibold text-white font-display text-base md:text-lg">Do you work with hospitals, NGOs, or individual customers?</span>
+                        <span class="ml-4 flex h-6 w-6 shrink-0 items-center justify-center text-[#94a3b8] transition-transform duration-300" data-faq-icon>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </span>
+                    </button>
+                    <div class="max-h-0 overflow-hidden transition-all duration-300 ease-out" data-faq-content>
+                        <div class="pb-6 text-sm leading-relaxed text-[#94a3b8]">
+                            Galaxy System works exclusively and directly with <strong>individual disabled persons</strong> and their families. This ensures 1-on-1 personalized attention, accurate clinical physical assessment, and tailored engineering for every client.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="border-t border-[rgba(255,255,255,0.06)] bg-[#040a12] py-8 text-sm text-[#546880]">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+            <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-4 lg:gap-10">
+                <!-- Branding -->
+                <div class="flex flex-col gap-4">
+                    <a aria-label="Galaxy System home" class="flex items-center gap-3" href="index.html">
+                        <img src="galaxy_system_logo.svg" class="h-8 w-auto" alt="Galaxy System Logo">
+                    </a>
+                    <p class="text-xs leading-relaxed text-[#94a3b8]">
+                        Adaptive driving modifications and vehicle entry accessibility systems designed around individual comfort, safety, and everyday independence.
+                    </p>
+                </div>
+                <!-- Links: Company -->
+                <div class="flex flex-col gap-3">
+                    <h4 class="font-semibold text-white font-display">Company</h4>
+                    <a href="about.html" class="hover:text-white transition-colors">About Us</a>
+                    <a href="success-stories.html" class="hover:text-white transition-colors">Success Stories</a>
+                    <a href="testimonials.html" class="hover:text-white transition-colors">Testimonials</a>
+                    <a href="gallery.html" class="hover:text-white transition-colors">Gallery Grid</a>
+                </div>
+                <!-- Links: Solutions -->
+                <div class="flex flex-col gap-3">
+                    <h4 class="font-semibold text-white font-display">Solutions</h4>
+                    <a href="solutions/adaptive-mobility.html" class="hover:text-white transition-colors">Adaptive Driving</a>
+                    <a href="solutions/prosthetics.html" class="hover:text-white transition-colors">Prosthetics & Orthotics</a>
+                    <a href="faq.html" class="hover:text-white transition-colors">FAQ Support</a>
+                </div>
+                <!-- Links: Contact -->
+                <div class="flex flex-col gap-3">
+                    <h4 class="font-semibold text-white font-display">Contact Us</h4>
+                    <div class="text-xs text-[#94a3b8] space-y-2">
+                        <div>
+                            <span class="text-[#4B9DCD] font-medium block text-[11px] uppercase tracking-wider">Office (Near Shankar Mutt)</span>
+                            <span>12th 'B' Cross, 13th Main, 2nd Stage,<br>WOC, behind BBMP Office, Ward,<br>Nagapura, Bengaluru, KA 560086</span>
+                        </div>
+                        <div>
+                            <span class="text-[#4B9DCD] font-medium block text-[11px] uppercase tracking-wider mt-1.5">Garage & Workshop</span>
+                            <span>608, Dr Rajkumar Road, Opp. ICICI Bank,<br>2nd Block, Rajajinagar,<br>Bengaluru, KA 560010</span>
+                        </div>
+                    </div>
+                    <a href="tel:+919845056726" class="hover:text-white transition-colors font-semibold text-[#b8c6d4] flex flex-col gap-1 mt-1">
+                        <span>+91 98450 56726</span>
+                        <span>+91 94487 01111</span>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-[rgba(255,255,255,0.06)] pt-8 text-center text-xs">
+                <p>&copy; 2026 Galaxy System. All rights reserved. Practical accessibility solutions for real-life comfort.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+
+    <!-- Quarter-Circle Arc FAB -->
+    <style>
+        #fab-overlay { position: fixed; inset: 0; z-index: 89; display: none; cursor: default; }
+        #fab-overlay.fab-active { display: block; }
+        #fab-container { position: fixed; bottom: 28px; right: 28px; z-index: 90; width: 62px; height: 62px; }
+        #fab-ring { position: absolute; width: 220px; height: 220px; bottom: 0; right: 0; border-radius: 50%; border: 1.5px solid rgba(30,41,59,0.08); pointer-events: none; opacity: 0; transform: scale(0.6); transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.34,1.4,0.64,1); clip-path: polygon(0% 0%, 50.1% 0%, 50.1% 50.1%, 0% 50.1%); }
+        #fab-ring.fab-active { opacity: 1; transform: scale(1); }
+        .fab-arc-item { position: absolute; top: 6px; left: 6px; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 18px rgba(15,23,42,0.22); cursor: pointer; opacity: 0; transform: translate(0, 0) scale(0.3); transition: transform 0.32s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.22s ease, box-shadow 0.18s ease; pointer-events: none; }
+        .fab-arc-item:hover { box-shadow: 0 6px 24px rgba(15,23,42,0.3); filter: brightness(1.08); }
+        #fab-wa  { background: #25D366; color: white; transition-delay: 0s; }
+        #fab-cal { background: #0d1520; color: white; transition-delay: 0.05s; }
+        #fab-em  { background: #f1f5f9; color: #334155; transition-delay: 0.1s; }
+        #fab-wa.fab-active  { transform: translate(-105px, 0) scale(1); opacity: 1; pointer-events: auto; }
+        #fab-cal.fab-active { transform: translate(-74px, -74px) scale(1); opacity: 1; pointer-events: auto; }
+        #fab-em.fab-active  { transform: translate(0, -105px) scale(1); opacity: 1; pointer-events: auto; }
+        .fab-arc-label { position: absolute; right: calc(100% + 10px); top: 50%; transform: translateY(-50%); background: #0d1520; color: white; font-size: 11.5px; font-weight: 600; padding: 5px 11px; border-radius: 100px; white-space: nowrap; box-shadow: 0 2px 10px rgba(15,23,42,0.2); opacity: 0; pointer-events: none; transition: opacity 0.15s ease; }
+        .fab-arc-item:hover .fab-arc-label { opacity: 1; }
+        #fab-hub { position: absolute; inset: 0; border-radius: 50%; background: #0d1520; color: white; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 26px rgba(15,23,42,0.30); transition: background 0.2s ease, transform 0.3s cubic-bezier(0.34,1.3,0.64,1); z-index: 2; }
+        #fab-hub:hover { background: #334155; }
+        #fab-hub.fab-active { background: #334155; transform: rotate(45deg); }
+        .fab-hub-icon { position: absolute; transition: opacity 0.18s ease, transform 0.22s ease; }
+        .fab-hub-close { opacity: 0; transform: scale(0.4); }
+        #fab-hub.fab-active .fab-hub-open  { opacity: 0; transform: scale(0.4); }
+        #fab-hub.fab-active .fab-hub-close { opacity: 1; transform: scale(1); }
+    </style>
+    <div id="fab-overlay" onclick="closeFab()"></div>
+    <div id="fab-container">
+        <div id="fab-ring"></div>
+        <a id="fab-wa" class="fab-arc-item" href="https://wa.me/919845056726?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20adaptive%20mobility%20solutions." target="_blank" aria-label="WhatsApp">
+            <span class="fab-arc-label">WhatsApp</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        </a>
+        <a id="fab-cal" class="fab-arc-item" href="tel:+919845056726" aria-label="Call">
+            <span class="fab-arc-label">Call Us</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 9.83a19.79 19.79 0 0 1-3-8.59A2 2 0 0 1 3.11 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.99 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </a>
+        <a id="fab-em" class="fab-arc-item" href="mailto:galaxysystembangalore@gmail.com" aria-label="Email">
+            <span class="fab-arc-label">Email Us</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+        <button id="fab-hub" onclick="toggleFab()" aria-label="Contact us" aria-expanded="false">
+            <span class="fab-hub-icon fab-hub-open">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg>
+            </span>
+            <span class="fab-hub-icon fab-hub-close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </span>
+        </button>
+    </div>
+    <script>
+        (function () {
+            let fabOpen = false;
+            const hub = document.getElementById('fab-hub');
+            const overlay = document.getElementById('fab-overlay');
+            const ring = document.getElementById('fab-ring');
+            const items = ['fab-wa', 'fab-cal', 'fab-em'].map(id => document.getElementById(id));
+            window.toggleFab = function () { fabOpen ? closeFab() : openFab(); };
+            function openFab() { fabOpen = true; hub.classList.add('fab-active'); hub.setAttribute('aria-expanded', 'true'); overlay.classList.add('fab-active'); ring.classList.add('fab-active'); items.forEach(el => el.classList.add('fab-active')); }
+            window.closeFab = function () { fabOpen = false; hub.classList.remove('fab-active'); hub.setAttribute('aria-expanded', 'false'); overlay.classList.remove('fab-active'); ring.classList.remove('fab-active'); items.forEach(el => el.classList.remove('fab-active')); };
+            document.addEventListener('keydown', e => { if (e.key === 'Escape' && fabOpen) closeFab(); });
+        })();
+    </script>
+
+</body>
+</html>

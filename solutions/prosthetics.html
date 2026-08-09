@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prosthetics & Orthotics Solutions — Galaxy System</title>
+    <meta name="description" content="Custom upper and lower limb prostheses, custom 3D-scanned sockets, calipers, and clinical rehabilitation in Bengaluru.">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../styles/global.css">
+</head>
+<body class="min-h-screen flex flex-col bg-[#eef5fa] text-[#0c1a29] selection:bg-[#4B9DCD] selection:text-white">
+
+    <!-- Header Section -->
+    <header id="main-header"
+        class="fixed top-0 z-50 w-full border-b border-[#0c1a29]/10 bg-[#eef5fa]/90 backdrop-blur-md transition-all duration-300">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-2 lg:px-8 lg:py-3">
+            <!-- Logo -->
+            <a aria-label="Galaxy System home" class="flex items-center gap-3" href="../index.html">
+                <img src="../galaxy_system_logo.svg" class="h-8 lg:h-10 w-auto" alt="Galaxy System Logo">
+            </a>
+            
+            <!-- Navigation -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="../index.html" class="text-sm font-medium text-[#475569] hover:text-[#0c1a29] transition-colors">Home</a>
+                <a href="../index.html#services" class="text-sm font-medium text-[#0c1a29] font-semibold transition-colors">Services</a>
+                <a href="../about.html" class="text-sm font-medium text-[#475569] hover:text-[#0c1a29] transition-colors">About us</a>
+                <a href="../stories.html" class="text-sm font-medium text-[#475569] hover:text-[#0c1a29] transition-colors">Insights</a>
+                <a href="../faq.html" class="text-sm font-medium text-[#475569] hover:text-[#0c1a29] transition-colors">FAQs</a>
+                <a href="../contact.html" class="text-sm font-medium text-[#475569] hover:text-[#0c1a29] transition-colors">Contact</a>
+            </nav>
+            
+            <!-- CTAs -->
+            <div class="flex items-center gap-6">
+                <a href="tel:+919845056726" class="hidden text-sm font-medium text-[#0c1a29] transition-colors hover:text-[#2b7aac] md:inline-block">
+                    Call: +91 98450 56726
+                </a>
+                <a href="../contact.html" class="btn-primary !hidden h-10 lg:!inline-flex">
+                    Book Consultation
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="inline-flex h-10 w-10 items-center justify-center rounded-xl border-transparent text-[#1a2f4a] transition-colors hover:bg-[#4B9DCD]/5 lg:hidden" aria-label="Open menu" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Overlay Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 hidden flex-col bg-[#09101a]/95 backdrop-blur-lg p-6">
+        <div class="flex items-center justify-between mb-8">
+            <img src="../galaxy_system_logo.svg" class="h-8 w-auto" alt="Galaxy System Logo">
+            <button id="close-menu-btn" class="h-10 w-10 flex items-center justify-center rounded-xl border-transparent text-[#1a2f4a]" aria-label="Close menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-4 text-lg font-medium text-[#1a2f4a]">
+            <a href="../index.html" class="hover:text-white py-2">Home</a>
+            <a href="../index.html#services" class="hover:text-white py-2">Services</a>
+            <a href="../about.html" class="hover:text-white py-2">About us</a>
+            <a href="../stories.html" class="hover:text-white py-2">Stories</a>
+            <a href="../faq.html" class="hover:text-white py-2">FAQs</a>
+            <a href="../contact.html" class="hover:text-white py-2">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-12 lg:pt-16">
+        
+        <!-- Attached Sub-Navbar Breadcrumb Strip -->
+        <div class="border-b border-[#0c1a29]/10 bg-[#eef5fa] py-2.5">
+            <div class="mx-auto max-w-7xl px-5 lg:px-8">
+                <nav class="flex text-xs font-medium text-[#475569]" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-2">
+                        <li class="inline-flex items-center">
+                            <a href="../index.html" class="hover:text-[#0c1a29] transition-colors flex items-center gap-1.5 text-[#475569]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                                Home
+                            </a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-3 h-3 text-[#94a3b8]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/></svg>
+                            <a href="../index.html#services" class="hover:text-[#0c1a29] transition-colors text-[#475569]">Services</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-3 h-3 text-[#94a3b8]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/></svg>
+                            <span class="text-[#0c1a29] font-semibold">Prosthetics & Orthotics</span>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden bg-gradient-to-br from-[#d4e5f4] via-[#e5eff8] to-[#f0f6fc] border-b border-[#0c1a29]/10 py-10 lg:py-16 text-[#0c1a29]">
+            <div class="mx-auto max-w-7xl px-5 lg:px-8">
+                <div class="max-w-3xl">
+
+                    <span class="section-label">Limb Support & Orthotics</span>
+                    <h1 class="text-4xl font-medium leading-[1.08] tracking-tight text-[#0c1a29] font-display sm:text-6xl">
+                        Prosthetic Limbs & <br>
+                        <span class="text-[#4B9DCD]">Orthotic Support Systems</span>
+                    </h1>
+                    <p class="mt-5 text-base text-[#475569] leading-relaxed max-w-2xl font-normal">
+                        Galaxy System provides prosthetics, custom orthotics, artificial limbs, and calipers configured for everyday comfort and active independence. Every fit undergoes precise clinical assessment and calibration.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prosthetics vs Orthotics Distinction -->
+        <section class="bg-white border-b border-[#0c1a29]/10 py-12 lg:py-16">
+            <div class="mx-auto max-w-7xl px-5 lg:px-8">
+                <div class="grid gap-8 lg:grid-cols-2 items-center">
+                    <div>
+                        <span class="section-label">Clinical Guidance</span>
+                        <h2 class="text-3xl font-bold text-[#0c1a29] font-display sm:text-4xl">Prosthetics vs. Orthotics</h2>
+                        <p class="mt-4 text-[#475569] text-sm leading-relaxed">
+                            <strong class="text-[#0c1a29]">Prosthetics:</strong> Artificial limbs designed to <em>replace</em> a missing body part following amputation or congenital limb difference.<br><br>
+                            <strong class="text-[#0c1a29]">Orthotics:</strong> Supportive medical devices designed to <em>support, align, correct, or protect</em> an existing body part affected by polio, stroke, cerebral palsy, or injury.
+                        </p>
+                        <div class="mt-6 p-5 bg-[#eef5fa] rounded-2xl border border-[#0c1a29]/10">
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-[#0c1a29] mb-2 flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4B9DCD" stroke-width="2.5"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/></svg>
+                                Custom Fabrication & Gait Training Period
+                            </h4>
+                            <p class="text-xs text-[#475569] leading-relaxed">
+                                Universal prosthetics cannot be bought "off-the-shelf." Every device must be individually custom-fabricated after clinical measurement, followed by a mandatory <strong>practice and gait training period</strong> to build strength and walk naturally.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Image Showcase Card -->
+                    <div class="bg-[#f8fafc] border border-slate-200 rounded-2xl overflow-hidden p-6 flex flex-col justify-center items-center text-center min-h-[260px] shadow-sm">
+                        <div class="h-12 w-12 rounded-full bg-[#4B9DCD]/15 text-[#2b7aac] flex items-center justify-center mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <span class="text-xs font-bold text-[#0c1a29] uppercase tracking-wider">Clinical Assessment & 3D Scanning</span>
+                        <p class="text-xs text-[#475569] mt-2 max-w-xs leading-relaxed">Prosthetic Socket Casting & 3D Scanning Workshop Session</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Detail Grid -->
+        <section class="mx-auto max-w-7xl px-5 py-12 lg:px-8 lg:py-20">
+            <div class="mb-12 text-center max-w-2xl mx-auto">
+                <span class="section-label">Comprehensive Offerings</span>
+                <h2 class="text-3xl font-bold text-[#0c1a29] font-display sm:text-4xl">Custom Prosthetic & Orthotic Devices</h2>
+                <p class="mt-3 text-sm text-[#475569]">Fabricated in-house using endoskeletal modular frames, carbon fibre, titanium, thermoplastics, and silicone liners.</p>
+            </div>
+
+            <div class="grid gap-8 md:grid-cols-2 lg:gap-10">
+                
+                <!-- Service 1: Lower Limb Prosthetics -->
+                <div class="bg-white border border-[#0c1a29]/10 rounded-2xl p-8 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+                    <div>
+                        <div class="w-full h-48 rounded-xl bg-[#f8fafc] border border-slate-200 overflow-hidden relative mb-6">
+                            <img src="../assets/prosthetics_card.png" alt="Lower Limb Prosthetics" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-bold text-[#0c1a29] font-display mb-3">Lower Limb Prosthetics</h3>
+                        <p class="text-sm text-[#475569] leading-relaxed mb-6">
+                            Includes Partial Foot, Syme, Transtibial (below-knee), Knee Disarticulation, Transfemoral (above-knee), and Hip Disarticulation. Features modular endoskeletal pylons, carbon fibre feet, and hydraulic/microprocessor knee options.
+                        </p>
+                    </div>
+                    <span class="text-xs font-semibold text-[#0c1a29] bg-[#e2edf6] border border-[#0c1a29]/10 px-3 py-1.5 self-start rounded-lg">Endoskeletal Modular Systems</span>
+                </div>
+
+                <!-- Service 2: Upper Limb Prosthetics -->
+                <div class="bg-white border border-[#0c1a29]/10 rounded-2xl p-8 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+                    <div>
+                        <div class="w-full h-48 rounded-xl bg-[#f8fafc] border border-slate-200 flex flex-col items-center justify-center p-4 text-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2b7aac" stroke-width="1.5" class="mb-2"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v6"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/></svg>
+                            <span class="text-xs font-bold text-[#0c1a29] uppercase tracking-wider">Upper Limb Prosthetics</span>
+                            <span class="text-[11px] text-[#475569] mt-1">Myoelectric & Body-Powered Hands</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#0c1a29] font-display mb-3">Upper Limb Prosthetics</h3>
+                        <p class="text-sm text-[#475569] leading-relaxed mb-6">
+                            Ranges from Partial Hand and Transradial (below-elbow) to Transhumeral and Shoulder Disarticulation. Available in <strong class="text-[#0c1a29]">Passive (cosmetic)</strong>, <strong class="text-[#0c1a29]">Body-Powered</strong>, and advanced <strong class="text-[#0c1a29]">Myoelectric</strong> muscle-signal controlled hands.
+                        </p>
+                    </div>
+                    <span class="text-xs font-semibold text-[#0c1a29] bg-[#e2edf6] border border-[#0c1a29]/10 px-3 py-1.5 self-start rounded-lg">Myoelectric & Body-Powered</span>
+                </div>
+
+                <!-- Service 3: Custom Calipers & Lower Limb Orthotics -->
+                <div class="bg-white border border-[#0c1a29]/10 rounded-2xl p-8 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+                    <div>
+                        <div class="w-full h-48 rounded-xl bg-[#f8fafc] border border-slate-200 flex flex-col items-center justify-center p-4 text-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2b7aac" stroke-width="1.5" class="mb-2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            <span class="text-xs font-bold text-[#0c1a29] uppercase tracking-wider">AFO & KAFO Calipers</span>
+                            <span class="text-[11px] text-[#475569] mt-1">Custom Orthotic Support & Foot Drop Solutions</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#0c1a29] font-display mb-3">Lower Limb Orthotics & Calipers</h3>
+                        <p class="text-sm text-[#475569] leading-relaxed mb-6">
+                            Custom Foot Orthoses (FO insoles), Ankle-Foot Orthoses (AFO - rigid, articulated, posterior leaf spring, ground reaction for foot drop and post-polio), Knee Orthoses (KO), and Knee-Ankle-Foot Orthoses (KAFO calipers).
+                        </p>
+                    </div>
+                    <span class="text-xs font-semibold text-[#0c1a29] bg-[#e2edf6] border border-[#0c1a29]/10 px-3 py-1.5 self-start rounded-lg">AFO & KAFO Calipers</span>
+                </div>
+
+                <!-- Service 4: Spinal & Upper Limb Orthotics -->
+                <div class="bg-white border border-[#0c1a29]/10 rounded-2xl p-8 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+                    <div>
+                        <div class="w-full h-48 rounded-xl bg-[#f8fafc] border border-slate-200 flex flex-col items-center justify-center p-4 text-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2b7aac" stroke-width="1.5" class="mb-2"><rect width="18" height="18" x="3" y="3" rx="2"/></svg>
+                            <span class="text-xs font-bold text-[#0c1a29] uppercase tracking-wider">Spinal & Arm Braces</span>
+                            <span class="text-[11px] text-[#475569] mt-1">TLSO Scoliosis Braces & Wrist Hand Splints</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#0c1a29] font-display mb-3">Spinal & Upper Limb Orthotics</h3>
+                        <p class="text-sm text-[#475569] leading-relaxed mb-6">
+                            Includes Cervical collars (CO), Lumbo-Sacral (LSO), Thoraco-Lumbo-Sacral (TLSO for scoliosis), Wrist-Hand Orthoses (WHO for carpal tunnel & stroke rehab), and hand contracture splints.
+                        </p>
+                    </div>
+                    <span class="text-xs font-semibold text-[#0c1a29] bg-[#e2edf6] border border-[#0c1a29]/10 px-3 py-1.5 self-start rounded-lg">Spinal & Upper Limb Bracing</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Clinical Process & Rehabilitation Details -->
+        <section class="border-t border-[#0c1a29]/10 bg-white py-12 lg:py-24">
+            <div class="mx-auto max-w-7xl px-5 lg:px-8">
+                <div class="grid gap-12 lg:grid-cols-[1fr_1.5fr] items-center">
+                    <div>
+                        <span class="section-label">Our Process</span>
+                        <h2 class="text-3xl font-bold text-[#0c1a29] font-display sm:text-4xl">Patient-Centric Fitting & Gait Training</h2>
+                        <p class="mt-4 text-[#475569] text-sm leading-relaxed">
+                            Getting a new prosthetic limb or orthotic support is a journey. At Galaxy System, we blend advanced biomedical manufacturing with personalized physical therapy to ensure you achieve seamless, pain-free mobility.
+                        </p>
+                    </div>
+                    <div class="p-8 border border-slate-200 bg-[#f8fafc] rounded-3xl grid gap-6 sm:grid-cols-2 shadow-sm">
+                        <div>
+                            <h4 class="font-bold text-[#0c1a29] text-sm mb-1.5">3D Anatomical Mapping</h4>
+                            <p class="text-xs text-[#475569] leading-relaxed">We use high-resolution 3D scanners to digitize limb shape, ensuring the customized socket distributes weight evenly without skin irritation.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[#0c1a29] text-sm mb-1.5">Multi-Stage Trial Fittings</h4>
+                            <p class="text-xs text-[#475569] leading-relaxed">Before finalizing the design, you will test diagnostic check-sockets to verify comfort and alignment in motion.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[#0c1a29] text-sm mb-1.5">Gait Training & Rehab</h4>
+                            <p class="text-xs text-[#475569] leading-relaxed">Our clinical physiotherapists guide you through posture alignment, balance, and natural walk pattern re-education.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[#0c1a29] text-sm mb-1.5">Long-Term Adjustments</h4>
+                            <p class="text-xs text-[#475569] leading-relaxed">We provide lifetime socket adjustments and component servicing at our Bengaluru workshop.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consultation Inspection Banner -->
+        <section class="bg-gradient-to-br from-[#d4e5f4] via-[#e5eff8] to-[#f0f6fc] py-12 lg:py-20 border-t border-[#0c1a29]/10">
+            <div class="mx-auto max-w-7xl px-5 lg:px-8 text-center max-w-3xl">
+                <h2 class="text-3xl font-bold tracking-tight text-[#0c1a29] font-display sm:text-4xl">Schedule a Clinical Assessment</h2>
+                <p class="mt-4 text-[#475569] text-base leading-relaxed">
+                    Book a consultation at our Rajajinagar clinic for a personalized limb assessment, socket fitting trial, and orthotic evaluation.
+                </p>
+                <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="../contact.html" class="btn-primary">Book Consultation</a>
+                    <a href="tel:+919845056726" class="btn-secondary">Call Clinic: +91 98450 56726</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="border-t border-[rgba(255,255,255,0.06)] bg-[#040a12] py-8 text-sm text-[#546880]">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+            <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-4 lg:gap-10">
+                <!-- Branding -->
+                <div class="flex flex-col gap-4">
+                    <a aria-label="Galaxy System home" class="flex items-center gap-3" href="../index.html">
+                        <img src="../galaxy_system_logo.svg" class="h-8 w-auto" alt="Galaxy System Logo">
+                    </a>
+                    <p class="text-xs leading-relaxed text-[#94a3b8]">
+                        Adaptive driving modifications and vehicle entry accessibility systems designed around individual comfort, safety, and everyday independence.
+                    </p>
+                </div>
+                <!-- Links: Company -->
+                <div class="flex flex-col gap-3">
+                    <h4 class="font-semibold text-white font-display">Company</h4>
+                    <a href="../about.html" class="hover:text-white transition-colors">About Us</a>
+                    <a href="../stories.html" class="hover:text-white transition-colors">Stories & Insights</a>
+                    <a href="../privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="../terms.html" class="hover:text-white transition-colors">Terms & Conditions</a>
+                </div>
+                <!-- Links: Solutions -->
+                <div class="flex flex-col gap-3">
+                    <h4 class="font-semibold text-white font-display">Solutions</h4>
+                    <a href="adaptive-mobility.html" class="hover:text-white transition-colors">Adaptive Driving</a>
+                    <a href="prosthetics.html" class="hover:text-white transition-colors font-semibold text-white">Prosthetics & Orthotics</a>
+                    <a href="../faq.html" class="hover:text-white transition-colors">FAQ Support</a>
+                </div>
+                <!-- Links: Contact -->
+                <div class="flex flex-col gap-3">
+                    <h4 class="font-semibold text-white font-display">Contact Us</h4>
+                    <div class="text-xs text-[#94a3b8] space-y-2">
+                        <div>
+                            <span class="text-[#4B9DCD] font-medium block text-[11px] uppercase tracking-wider">Office (Near Shankar Mutt)</span>
+                            <span>12th 'B' Cross, 13th Main, 2nd Stage,<br>WOC, behind BBMP Office, Ward,<br>Nagapura, Bengaluru, KA 560086</span>
+                        </div>
+                        <div>
+                            <span class="text-[#4B9DCD] font-medium block text-[11px] uppercase tracking-wider mt-1.5">Garage & Workshop</span>
+                            <span>608, Dr Rajkumar Road, Opp. ICICI Bank,<br>2nd Block, Rajajinagar,<br>Bengaluru, KA 560010</span>
+                        </div>
+                    </div>
+                    <a href="tel:+919845056726" class="hover:text-white transition-colors font-semibold text-[#b8c6d4] flex flex-col gap-1 mt-1">
+                        <span>+91 98450 56726</span>
+                        <span>+91 94487 01111</span>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-[rgba(255,255,255,0.06)] pt-8 text-center text-xs">
+                <p>&copy; 2026 Galaxy System. All rights reserved. <a href="../privacy.html" class="hover:text-white underline ml-2">Privacy Policy</a> | <a href="../terms.html" class="hover:text-white underline ml-1">Terms & Conditions</a></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
