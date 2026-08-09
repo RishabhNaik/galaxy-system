@@ -77,13 +77,13 @@ export default function HomePage() {
       linkLabel: "Learn Technical Details",
     },
     {
-      title: "Prosthetics & Orthotics Division",
-      desc: "Custom-fitted artificial limbs (upper/lower limb) and orthotic devices including FOs, AFOs, KAFOs, and spinal braces.",
-      icon: Activity,
+      title: "Prosthetics & Orthotics",
+      desc: "Custom-fitted artificial limbs, lower/upper limb prostheses, and AFO/KAFO orthotic calipers engineered for anatomical alignment.",
+      icon: Footprints,
       link: "/solutions/prosthetics",
-      tag: "Prosthetics & Orthotics",
-      image: "/assets/hero_prosthetic.png",
-      linkLabel: "Explore Clinical Solutions",
+      tag: "Mobility Support",
+      image: "/assets/prosthetics_card.png",
+      linkLabel: "View Prosthetic Lineup",
     },
   ]
 

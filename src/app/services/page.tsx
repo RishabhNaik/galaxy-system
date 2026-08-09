@@ -114,7 +114,7 @@ export default function ServicesPage() {
       desc: "Custom artificial legs categorized by amputation level: transtibial (below-knee), transfemoral (above-knee), and hip disarticulation.",
       tag: "Artificial Legs",
       icon: Activity,
-      image: "/assets/hero_prosthetic.png",
+      image: "/assets/prosthetics_card.png",
       href: "/solutions/prosthetics",
     },
     {
@@ -130,7 +130,7 @@ export default function ServicesPage() {
       desc: "Options between rigid outer shell exoskeletal limbs or modern modular endoskeletal systems with inner skeletons and soft cosmetic covers.",
       tag: "Design Options",
       icon: Activity,
-      image: "/assets/hero_prosthetic.png",
+      image: "/assets/prosthetics_card.png",
       href: "/solutions/prosthetics",
     },
   ]

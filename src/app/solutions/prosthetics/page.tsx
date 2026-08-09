@@ -53,7 +53,7 @@ export default function ProstheticsPage() {
       tag: "Prostheses",
       desc: "Artificial legs customized by amputation level: transtibial (below-knee), transfemoral (above-knee), and hip disarticulation.",
       specs: ["Anatomical custom socket fabrication", "Energy-storing carbon fiber feet", "Hydraulic & pneumatic knee joint units"],
-      image: "/assets/hero_prosthetic.png",
+      image: "/assets/prosthetics_card.png",
     },
     {
       title: "Upper-Limb Prostheses",
@@ -67,7 +67,7 @@ export default function ProstheticsPage() {
       tag: "Design Options",
       desc: "Exoskeletal prostheses feature a hard, rigid outer shell shaped like a limb. Endoskeletal models feature a central, adjustable inner skeleton covered by soft skin-like material.",
       specs: ["Exoskeletal: High durability & heavy work resistance", "Endoskeletal: Lightweight, highly adjustable & modular", "Cosmetic foam cover customization"],
-      image: "/assets/hero_prosthetic.png",
+      image: "/assets/prosthetics_card.png",
     },
   ]
 
