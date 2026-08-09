@@ -55,11 +55,29 @@ html {
 
 html, body {
   overflow-x: hidden;
+  max-width: 100vw;
   width: 100%;
   margin: 0;
   padding: 0;
   background-color: #eef5fa;
   color: #0c1a29;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Mobile Edge & Container Responsive Safety */
+@media (max-width: 640px) {
+  .px-5 {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+  .px-8 {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+  .py-16 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
 }
 
 /* ── 4K & Ultra-Wide Responsive Container Scaling ─────────────── */
