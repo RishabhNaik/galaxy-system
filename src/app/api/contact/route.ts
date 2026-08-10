@@ -19,8 +19,8 @@ export async function POST(req: NextRequest) {
     })
 
     const mailOptions = {
-      from: `"Galaxy System Website" <${process.env.GMAIL_USER}>`,
-      to: process.env.GMAIL_RECEIVER,        // where consultations are received
+      from: `"Galaxy System Website" <${process.env.GMAIL_USER || "shiv.galaxysystem@gmail.com"}>`,
+      to: process.env.GMAIL_RECEIVER || "shiv.galaxysystem@gmail.com",        // where consultations are received
       replyTo: email || undefined,
       subject: `New Consultation Request — ${name} | Galaxy System`,
       html: `
@@ -88,7 +88,7 @@ export async function POST(req: NextRequest) {
           <!-- Footer -->
           <div style="background: #0c1a29; padding: 20px 40px; text-align: center;">
             <p style="color: #546880; font-size: 11px; margin: 0;">
-              Galaxy System · Rajajinagar, Bengaluru · galaxysystembangalore@gmail.com
+              Galaxy System · Rajajinagar, Bengaluru · shiv.galaxysystem@gmail.com
             </p>
           </div>
 

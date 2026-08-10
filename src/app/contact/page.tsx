@@ -107,8 +107,8 @@ export default function ContactPage() {
                   <Mail className="h-5 w-5 text-sky shrink-0" />
                   <div>
                     <h4 className="text-xs font-bold uppercase tracking-wider text-navy">Email Enquiries</h4>
-                    <a href="mailto:info@galaxysystem.in" className="text-xs text-body hover:text-sky transition-colors">
-                      info@galaxysystem.in
+                    <a href="mailto:shiv.galaxysystem@gmail.com" className="text-xs text-body hover:text-sky transition-colors">
+                      shiv.galaxysystem@gmail.com
                     </a>
                   </div>
                 </div>

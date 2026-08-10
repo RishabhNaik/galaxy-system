@@ -434,38 +434,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 5. FAQ Section ─────────────────────────────────────────── */}
-      <section className="py-16 lg:py-24 bg-mist border-b border-navy/15 reveal-on-scroll">
-        <div className="mx-auto max-w-4xl px-5 lg:px-8">
-          
-          <div className="text-center space-y-3 mb-12">
-            <span className="inline-block px-3 py-1 bg-sky-light border border-sky text-[0.7rem] font-bold uppercase tracking-wider text-sky-dark">
-              Frequently Asked Questions
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-medium tracking-tight text-navy">
-              Everything You Need To Know
-            </h2>
-          </div>
-
-          <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, idx) => (
-              <AccordionItem key={idx} value={`item-${idx}`}>
-                <AccordionTrigger>{faq.q}</AccordionTrigger>
-                <AccordionContent>{faq.a}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-
-          <div className="text-center mt-8 pt-4">
-            <p className="text-xs text-body mb-4">Have more specific questions regarding your car model or mobility need?</p>
-            <Button asChild variant="outline" size="sm">
-              <Link href="/faq">View All FAQs & Technical Answers</Link>
-            </Button>
-          </div>
-
-        </div>
-      </section>
-
       {/* ── 5.5 Workshop Location & Map Section (Above Footer & Bottom CTA) ── */}
       <section className="py-16 lg:py-24 bg-white border-b border-navy/15 reveal-on-scroll">
         <div className="mx-auto max-w-7xl px-5 lg:px-8 space-y-10">

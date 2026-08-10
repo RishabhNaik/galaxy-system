@@ -101,7 +101,7 @@ const jsonLd = {
       description:
         "Bengaluru's trusted specialist in custom adaptive driving modifications (hand controls, electronic clutch, left-foot accelerator) and prosthetic limbs for physically challenged individuals.",
       telephone: "+919845056726",
-      email: "info@galaxysystem.in",
+      email: "shiv.galaxysystem@gmail.com",
       priceRange: "₹₹",
       address: {
         "@type": "PostalAddress",

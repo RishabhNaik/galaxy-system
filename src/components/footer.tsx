@@ -101,7 +101,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4 shrink-0 text-sky" />
-                <a href="mailto:info@galaxysystem.in" className="hover:text-white transition-colors">info@galaxysystem.in</a>
+                <a href="mailto:shiv.galaxysystem@gmail.com" className="hover:text-white transition-colors">shiv.galaxysystem@gmail.com</a>
               </div>
               <div className="flex items-center gap-2 pt-1 text-slate-300">
                 <Clock className="h-4 w-4 shrink-0 text-sky" />
