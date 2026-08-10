@@ -173,7 +173,7 @@ export default function ServicesPage() {
       />
 
       {/* ── Hero Banner Section ───────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-navy text-white pt-28 pb-16 lg:pt-36 lg:pb-24 border-b border-navy/15">
+      <section className="relative overflow-hidden bg-navy text-white pt-24 pb-16 sm:pt-28 lg:pt-36 lg:pb-24 border-b border-navy/15">
         <div className="absolute inset-0 z-0">
           <Image
             src="/assets/hero-workshop.png"

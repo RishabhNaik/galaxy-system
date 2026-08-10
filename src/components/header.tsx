@@ -28,7 +28,7 @@ export function Header() {
   return (
     <>
       <header className="fixed top-0 z-50 w-full border-b border-navy/15 bg-white shadow-sm transition-all duration-300">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:py-5 lg:px-8">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 pt-5 pb-4 lg:py-5 lg:px-8">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             <Image

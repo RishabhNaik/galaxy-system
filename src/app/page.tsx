@@ -131,7 +131,7 @@ export default function HomePage() {
       />
 
       {/* ── 1. Hero Section (Centered Blueprint Engineering Theme with Background Image) ── */}
-      <section className="relative overflow-hidden border-b border-navy/15 text-white pt-32 pb-24 lg:pt-40 lg:pb-32 bg-navy">
+      <section className="relative overflow-hidden border-b border-navy/15 text-white pt-24 pb-20 sm:pt-32 sm:pb-24 lg:pt-40 lg:pb-32 bg-navy">
         
         {/* Full-Bleed Background Image with Modern Dark Gradients & Blur */}
         <div className="absolute inset-0 z-0">
