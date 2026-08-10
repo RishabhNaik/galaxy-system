@@ -10,6 +10,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
 import { ConsultationModal } from "@/components/consultation-modal"
 import { ReelCarousel } from "@/components/reel-carousel"
+import { useScrollReveal } from "@/hooks/use-scroll-reveal"
 import {
   Car,
   Settings,
@@ -36,6 +37,7 @@ import {
 export default function HomePage() {
   const [modalOpen, setModalOpen] = useState(false)
   const reviewsContainerRef = React.useRef<HTMLDivElement>(null)
+  const scrollRevealRef = useScrollReveal()
 
   const scrollReviews = (direction: "left" | "right") => {
     if (reviewsContainerRef.current) {
@@ -181,87 +183,92 @@ export default function HomePage() {
   ]
 
   return (
-    <>
+    <div ref={scrollRevealRef}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* ── 1. Hero Section (Centered Blueprint Engineering Theme with Background Image) ── */}
-      <section className="relative overflow-hidden border-b border-navy/15 text-white pt-24 pb-20 sm:pt-32 sm:pb-24 lg:pt-40 lg:pb-32 bg-navy">
+      {/* ── 1. Hero Section (Cinematic Dark Aesthetic matching user design) ── */}
+      <section className="relative overflow-hidden text-white pt-28 pb-20 sm:pt-36 sm:pb-28 lg:pt-40 lg:pb-36 bg-[#060e17] border-b border-navy/15">
         
-        {/* Full-Bleed Background Image with Modern Dark Gradients & Blur */}
+        {/* Cinematic Background Image with Dark Left Gradient Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/assets/hero-workshop.png"
-            alt="Galaxy System Modification Workshop Floor"
+            src="/assets/hero_cinematic_steering.png"
+            alt="Galaxy System Adaptive Steering Wheel & Hand Controls"
             fill
-            className="object-cover opacity-35"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+            className="object-cover object-center sm:object-right opacity-65"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/90 via-navy/85 to-navy-dark/95" />
-          <div className="absolute inset-0 tech-grid opacity-15 pointer-events-none" />
+          {/* Dark Gradient Overlay for 100% text legibility */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#060e17] via-[#060e17]/90 to-transparent w-full lg:w-3/4" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#060e17] via-transparent to-[#060e17]/60" />
         </div>
 
-
-
         <div className="mx-auto max-w-7xl px-5 lg:px-8 relative z-10">
-          
-          {/* Centered Content Column */}
-          <div className="text-center space-y-8 max-w-4xl mx-auto mb-16">
+          <div className="max-w-2xl space-y-6">
             
-
-            <div className="space-y-4">
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-medium tracking-tight leading-[0.98] text-white">
-                EMPOWERING <span className="text-sky font-bold">PHYSICAL INDEPENDENCE</span>
-              </h1>
-              <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto font-normal">
-                Custom adaptive vehicle controls and prosthetic & orthotic systems engineered to restore personal freedom, confidence, and mobility for people with physical challenges.
-              </p>
-            </div>
-            {/* Action Buttons (Centered) */}
-            <div className="flex flex-col justify-center items-center gap-4">
-              <Button
-                asChild
-                variant="default"
-                size="lg"
-                className="w-full sm:w-auto bg-sky text-white border-sky hover:bg-sky-dark"
-              >
-                <Link href="#services">Explore Solutions</Link>
-              </Button>
-            </div>
-
-            {/* Technical Specifications Highlights (Horizontal Strip) */}
-            <div className="pt-8 border-t border-white/10 grid grid-cols-3 gap-6 max-w-2xl mx-auto">
-              <div className="space-y-1">
-                <span className="block text-2xl sm:text-3xl font-bold tracking-tight text-white">12,000+</span>
-                <span className="text-[0.65rem] sm:text-xs text-slate-300 font-semibold uppercase tracking-wider">Lives Empowered</span>
-              </div>
-              <div className="space-y-1">
-                <span className="block text-2xl sm:text-3xl font-bold tracking-tight text-white">15+ Yrs</span>
-                <span className="block text-[0.65rem] uppercase tracking-widest text-slate-400 font-semibold">Custom Engineering</span>
-              </div>
-              <div className="space-y-1">
-                <span className="block text-2xl sm:text-3xl font-bold tracking-tight text-white">100%</span>
-                <span className="block text-[0.65rem] uppercase tracking-widest text-slate-400 font-semibold">Safety Certified</span>
-              </div>
-            </div>
-            <div className="inline-flex items-center gap-2.5 px-3 py-1.5 bg-navy-dark/85 border border-white/10 text-[0.65rem] font-bold uppercase tracking-widest text-sky shadow-lg backdrop-blur-sm">
+            {/* RTO Tag */}
+            <div className="inline-flex items-center gap-2.5 px-3 py-1 bg-navy-dark/90 border border-sky/30 text-[0.65rem] font-bold uppercase tracking-widest text-sky shadow-lg backdrop-blur-sm">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-sky"></span>
               </span>
               RTO-APPROVED ADAPTIVE MOBILITY
             </div>
+
+            {/* Stacked Heading matching user reference image */}
+            <div className="space-y-1">
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-none text-white uppercase">
+                EMPOWERING <br />
+                <span className="text-sky text-4xl sm:text-6xl lg:text-7xl">PHYSICAL</span> <br />
+                INDEPENDENCE
+              </h1>
+            </div>
+
+            {/* Subtext matching user reference image */}
+            <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal max-w-xl">
+              Custom adaptive vehicle controls and prosthetic & orthotic systems engineered to restore personal freedom, confidence, and mobility for people with physical challenges.
+            </p>
+
+            {/* Action Buttons Row matching user reference image (Solid Sky Blue Button - No Gradient) */}
+            <div className="pt-4 flex flex-wrap items-center gap-5">
+              <Button
+                asChild
+                variant="default"
+                size="lg"
+                className="bg-sky text-navy font-bold uppercase tracking-wider text-xs px-7 py-3.5 hover:bg-white hover:text-navy transition-all duration-200 border-0 shadow-lg shrink-0"
+              >
+                <Link href="#services" className="flex items-center gap-2">
+                  Explore Solutions <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+
+            {/* Metrics Bar */}
+            <div className="pt-8 mt-6 border-t border-white/15 grid grid-cols-3 gap-6 max-w-lg">
+              <div className="space-y-0.5">
+                <span className="block text-xl sm:text-2xl font-bold tracking-tight text-white">12,000+</span>
+                <span className="text-[0.65rem] text-slate-400 font-semibold uppercase tracking-wider">Lives Empowered</span>
+              </div>
+              <div className="space-y-0.5">
+                <span className="block text-xl sm:text-2xl font-bold tracking-tight text-white">15+ Yrs</span>
+                <span className="block text-[0.65rem] uppercase tracking-widest text-slate-400 font-semibold">Custom Engineering</span>
+              </div>
+              <div className="space-y-0.5">
+                <span className="block text-xl sm:text-2xl font-bold tracking-tight text-white">100%</span>
+                <span className="block text-[0.65rem] uppercase tracking-widest text-slate-400 font-semibold">Safety Certified</span>
+              </div>
+            </div>
+
           </div>
-
-          
-
         </div>
       </section>
 
       {/* ── 2. Services Grid Section ───────────────────────────────── */}
-      <section id="services" className="py-16 lg:py-24 bg-mist border-b border-navy/15">
+      <section id="services" className="py-16 lg:py-24 bg-mist border-b border-navy/15 reveal-on-scroll">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
@@ -296,6 +303,7 @@ export default function HomePage() {
                       src={item.image}
                       alt={item.title}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-navy/65 via-transparent to-transparent" />
@@ -331,13 +339,6 @@ export default function HomePage() {
               )
             })}
           </div>
-          <div className="mt-12 text-center">
-            <Button asChild variant="default" size="lg">
-              <Link href="/services" className="inline-flex items-center gap-2">
-                View All Services & Technical Specifications <ArrowRight className="h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
         </div>
       </section>
 
@@ -345,7 +346,7 @@ export default function HomePage() {
       <ReelCarousel />
 
       {/* ── 3.5 Testimonials Carousel Section (Directly After Visual Demonstration Reels) ── */}
-      <section className="py-16 lg:py-24 bg-mist border-b border-navy/15">
+      <section className="py-16 lg:py-24 bg-mist border-b border-navy/15 reveal-on-scroll">
         <div className="mx-auto max-w-7xl px-5 lg:px-8 space-y-8">
           
           {/* Header Row with Navigation Arrows */}
@@ -434,7 +435,7 @@ export default function HomePage() {
       </section>
 
       {/* ── 5. FAQ Section ─────────────────────────────────────────── */}
-      <section className="py-16 lg:py-24 bg-mist border-b border-navy/15">
+      <section className="py-16 lg:py-24 bg-mist border-b border-navy/15 reveal-on-scroll">
         <div className="mx-auto max-w-4xl px-5 lg:px-8">
           
           <div className="text-center space-y-3 mb-12">
@@ -466,7 +467,7 @@ export default function HomePage() {
       </section>
 
       {/* ── 5.5 Workshop Location & Map Section (Above Footer & Bottom CTA) ── */}
-      <section className="py-16 lg:py-24 bg-white border-b border-navy/15">
+      <section className="py-16 lg:py-24 bg-white border-b border-navy/15 reveal-on-scroll">
         <div className="mx-auto max-w-7xl px-5 lg:px-8 space-y-10">
           
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -558,38 +559,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 6. Bottom Call to Action Banner ────────────────────────── */}
-      <section className="py-16 bg-navy text-white">
-        <div className="mx-auto max-w-5xl px-5 lg:px-8 text-center space-y-6">
-          <Badge variant="dark" className="mx-auto">Empowering Independent Travel</Badge>
-          <h2 className="text-3xl sm:text-4xl font-medium tracking-tight text-white max-w-2xl mx-auto">
-            Ready To Restore Complete Driving & Mobility Independence?
-          </h2>
-          <p className="text-sm text-slate-300 max-w-lg mx-auto leading-relaxed">
-            Contact our engineering team today for transparent guidance, vehicle compatibility reviews, and custom fitting assessments.
-          </p>
-          <div className="pt-2 flex flex-col sm:flex-row justify-center gap-4">
-            <Button
-              onClick={() => setModalOpen(true)}
-              variant="accent"
-              size="lg"
-            >
-              Book Consultation Now
-            </Button>
-            <Button
-              asChild
-              variant="secondary"
-              size="lg"
-              className="text-white border-white hover:bg-white hover:text-navy"
-            >
-              <a href="tel:+919845056726">Call +91 98450 56726</a>
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* Consultation Modal */}
       <ConsultationModal open={modalOpen} onOpenChange={setModalOpen} />
-    </>
+    </div>
   )
 }

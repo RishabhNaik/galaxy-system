@@ -108,9 +108,11 @@ export function ReelCarousel() {
                 className="snap-start shrink-0 w-[300px] sm:w-[328px] h-[480px] sm:h-[520px] relative overflow-hidden bg-black border border-navy/15 shadow-md"
               >
                 <iframe
+                  title={reel.title || "Galaxy System Adaptive Driving Demonstration Video"}
                   src={`https://www.instagram.com/reel/${reel.instagramId}/embed`}
                   className="w-full h-full border-0"
                   scrolling="no"
+                  loading="lazy"
                   allowFullScreen
                 />
               </div>
@@ -173,6 +175,7 @@ export function ReelCarousel() {
             <div className="relative w-full aspect-[9/16] bg-black flex items-center justify-center overflow-hidden">
               {expandedReel.isInstagram ? (
                 <iframe
+                  title={expandedReel.title || "Instagram Video Modal"}
                   src={`https://www.instagram.com/reel/${expandedReel.instagramId}/embed`}
                   className="absolute -top-[56px] -left-[1%] w-[102%] h-[calc(100%+114px)] border-0"
                   scrolling="no"

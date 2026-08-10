@@ -32,28 +32,28 @@ export function Footer() {
 
           {/* Core Solutions (3 cols) */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-sky">
+            <h3 className="text-xs font-bold uppercase tracking-widest text-sky">
               Adaptive Solutions
-            </h4>
-            <ul className="space-y-2 text-xs text-slate-300 font-medium">
+            </h3>
+            <ul className="space-y-2 text-xs text-slate-200 font-medium">
               <li>
                 <Link href="/solutions/adaptive-mobility" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  Hand-Operated Driving Controls <ArrowUpRight className="h-3 w-3 opacity-60" />
+                  Hand-Operated Driving Controls <ArrowUpRight className="h-3 w-3 opacity-80" />
                 </Link>
               </li>
               <li>
                 <Link href="/solutions/adaptive-mobility" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  Electronic Auto-Clutch Systems <ArrowUpRight className="h-3 w-3 opacity-60" />
+                  Electronic Auto-Clutch Systems <ArrowUpRight className="h-3 w-3 opacity-80" />
                 </Link>
               </li>
               <li>
                 <Link href="/solutions/adaptive-mobility" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  Left-Foot Accelerator Mods <ArrowUpRight className="h-3 w-3 opacity-60" />
+                  Left-Foot Accelerator Mods <ArrowUpRight className="h-3 w-3 opacity-80" />
                 </Link>
               </li>
               <li>
                 <Link href="/solutions/prosthetics" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  Advanced Prosthetic Limbs <ArrowUpRight className="h-3 w-3 opacity-60" />
+                  Advanced Prosthetic Limbs <ArrowUpRight className="h-3 w-3 opacity-80" />
                 </Link>
               </li>
 
@@ -62,14 +62,12 @@ export function Footer() {
 
           {/* Quick Links (2 cols) */}
           <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-sky">
+            <h3 className="text-xs font-bold uppercase tracking-widest text-sky">
               Navigation
-            </h4>
-            <ul className="space-y-2 text-xs text-slate-300 font-medium">
+            </h3>
+            <ul className="space-y-2 text-xs text-slate-200 font-medium">
               <li><Link href="/services" className="hover:text-white transition-colors">All Services</Link></li>
               <li><Link href="/about" className="hover:text-white transition-colors">About Galaxy System</Link></li>
-              {/* <li><Link href="/stories" className="hover:text-white transition-colors">Mobility Stories</Link></li> */}
-              {/* <li><Link href="/gallery" className="hover:text-white transition-colors">Modifications Gallery</Link></li> */}
               <li><Link href="/faq" className="hover:text-white transition-colors">FAQ & Guidance</Link></li>
               <li><Link href="/contact" className="hover:text-white transition-colors">Book Consultation</Link></li>
               <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
@@ -79,10 +77,10 @@ export function Footer() {
 
           {/* Contact & Workshop Info (3 cols) */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-sky">
+            <h3 className="text-xs font-bold uppercase tracking-widest text-sky">
               Locations & Contact
-            </h4>
-            <div className="space-y-2.5 text-xs text-slate-300">
+            </h3>
+            <div className="space-y-2.5 text-xs text-slate-200">
               <div className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 shrink-0 text-sky mt-0.5" />
                 <div>
@@ -97,7 +95,7 @@ export function Footer() {
                   <span>Rajajinagar, Bengaluru, KA 560010</span>
                 </div>
               </div>
-              <div className="flex items-center gap-2 pt-1 border-t border-white/5">
+              <div className="flex items-center gap-2 pt-1">
                 <Phone className="h-4 w-4 shrink-0 text-sky" />
                 <a href="tel:+919845056726" className="hover:text-white transition-colors">+91 98450 56726</a>
               </div>
@@ -105,7 +103,7 @@ export function Footer() {
                 <Mail className="h-4 w-4 shrink-0 text-sky" />
                 <a href="mailto:info@galaxysystem.in" className="hover:text-white transition-colors">info@galaxysystem.in</a>
               </div>
-              <div className="flex items-center gap-2 pt-1 text-slate-400">
+              <div className="flex items-center gap-2 pt-1 text-slate-300">
                 <Clock className="h-4 w-4 shrink-0 text-sky" />
                 <span>Mon to Sat: 9:30 AM to 5:00 PM</span>
               </div>
@@ -115,8 +113,8 @@ export function Footer() {
         </div>
 
         {/* Bottom copyright line */}
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 font-normal">
-          <p>© {new Date().getFullYear()} Galaxy System. All rights reserved. Precision Adaptive Mobility Engineering.</p>
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-300 font-normal">
+          <p>© {new Date().getFullYear()} Galaxy System. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
             <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>

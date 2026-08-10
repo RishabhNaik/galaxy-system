@@ -106,7 +106,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── 1. About the Founder Section ──────────────────────────── */}
-      <section className="py-16 lg:py-24 bg-white border-b border-navy/15 bg-dot-pattern bg-mesh-glow relative">
+      <section className="py-16 lg:py-24 bg-white border-b border-navy/15 relative">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             
@@ -153,24 +153,19 @@ export default function AboutPage() {
                   )
                 })}
               </div>
-
-              <div className="pt-2">
-                <Button onClick={() => setModalOpen(true)} variant="default">
-                  Book A Personal Consultation With Founder <ArrowRight className="h-4 w-4 ml-2" />
-                </Button>
-              </div>
             </div>
 
             {/* Right: Founder Card & International Certification (5 cols) */}
-            <div className="lg:col-span-5 space-y-6">
+            <div className="lg:col-span-5 space-y-5">
               
               {/* Founder Profile Visual Block */}
               <div className="border border-navy/20 bg-white overflow-hidden shadow-md group">
-                <div className="relative h-[580px] sm:h-[640px] w-full bg-slate-900 overflow-hidden">
+                <div className="relative h-[380px] sm:h-[420px] w-full bg-slate-900 overflow-hidden">
                   <Image
                     src="/assets/founder.png"
                     alt="Dr. Shiva Prasad Y B - Founder of Galaxy System"
                     fill
+                    sizes="(max-width: 1024px) 100vw, 40vw"
                     className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/30 to-transparent" />
@@ -182,7 +177,7 @@ export default function AboutPage() {
                     <p className="text-xs text-sky font-semibold">30+ Years Adaptive Engineering & Leadership</p>
                   </div>
                 </div>
-                <div className="p-6 bg-white border-t border-navy/10 space-y-2">
+                <div className="p-4 bg-white border-t border-navy/10 space-y-1">
                   <p className="text-xs text-body leading-relaxed italic">
                     "Mobility is not a privilege; it is the fundamental foundation of personal independence and human dignity."
                   </p>
@@ -190,14 +185,14 @@ export default function AboutPage() {
               </div>
 
               {/* Kivi Italy Certification Card */}
-              <div className="p-6 bg-navy-dark text-white border border-white/10 space-y-3">
+              <div className="p-5 bg-navy-dark text-white border border-white/10 space-y-2">
                 <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 border border-white/20 bg-white/10 flex items-center justify-center text-sky">
-                    <ShieldCheck className="h-5 w-5" />
+                  <div className="h-9 w-9 border border-white/20 bg-white/10 flex items-center justify-center text-sky shrink-0">
+                    <ShieldCheck className="h-4 w-4" />
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-white">Kivi Mobility Freedom SRL</h4>
-                    <p className="text-[0.65rem] text-sky uppercase font-bold tracking-wider">Italy-Certified Training</p>
+                    <h4 className="text-xs font-bold text-white">Kivi Mobility Freedom SRL</h4>
+                    <p className="text-[0.6rem] text-sky uppercase font-bold tracking-wider">Italy-Certified Training</p>
                   </div>
                 </div>
                 <p className="text-xs text-slate-300 leading-relaxed">
@@ -270,6 +265,7 @@ export default function AboutPage() {
               src="/assets/hero-workshop.png"
               alt="Galaxy System Engineering Team Workshop"
               fill
+              sizes="100vw"
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent flex items-end p-8 text-white">
@@ -331,21 +327,6 @@ export default function AboutPage() {
             </div>
 
           </div>
-
-          {/* Bottom Banner */}
-          <div className="p-8 bg-navy-dark text-white border border-white/10 text-center space-y-4">
-            <Badge variant="dark" className="mx-auto">Schedule A Consultation</Badge>
-            <h3 className="text-2xl font-medium text-white">Ready To Explore Custom Adaptive Solutions?</h3>
-            <p className="text-xs text-slate-300 max-w-md mx-auto leading-relaxed">
-              Dr. Shiva Prasad and the Galaxy System team are available at the Rajajinagar workshop to personally guide you.
-            </p>
-            <div className="pt-2 flex justify-center gap-4">
-              <Button onClick={() => setModalOpen(true)} variant="accent">
-                Book Consultation With Dr. Shiva Prasad
-              </Button>
-            </div>
-          </div>
-
         </div>
       </section>
 
