@@ -104,36 +104,56 @@ export function ReelCarousel() {
             return (
               <div
                 key={reel.id}
-                className="snap-start shrink-0 w-[280px] sm:w-[320px] h-[480px] sm:h-[540px] relative border border-navy/20 bg-navy text-white shadow-lg overflow-hidden group transition-all duration-300 hover:border-sky"
+                onClick={() => setExpandedReel(reel)}
+                className="snap-start shrink-0 w-[280px] sm:w-[320px] h-[480px] sm:h-[540px] relative border border-navy/20 bg-[#08121e] text-white shadow-xl overflow-hidden group cursor-pointer transition-all duration-300 hover:border-sky hover:shadow-2xl"
               >
-                {/* Instagram Iframe Element - Always loaded for native cover/thumbnail and player */}
-                <div className="w-full h-full bg-black overflow-hidden relative">
-                  <iframe
-                    src={`https://www.instagram.com/reel/${reel.instagramId}/embed`}
-                    className="absolute top-0 left-0 w-full h-[106%] border-0"
-                    scrolling="no"
-                    allowFullScreen
+                {/* Poster Image with Zoom & Dark Gradient Overlay */}
+                <div className="relative w-full h-full bg-slate-950 overflow-hidden">
+                  <Image
+                    src={reel.poster}
+                    alt={reel.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-85"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#08121e] via-[#08121e]/40 to-black/60" />
                 </div>
 
-                {/* Top Controls Bar */}
-                <div className="absolute top-3 left-3 right-3 flex items-center justify-end z-20 pointer-events-none">
-                  <div className="flex items-center gap-2 pointer-events-auto">
-                    <a
-                      href="https://www.instagram.com/galaxy_system_official/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-2.5 py-1 text-[0.65rem] font-bold uppercase tracking-wider bg-black/75 border border-white/25 text-white hover:bg-sky transition-colors flex items-center gap-1 cursor-pointer"
-                    >
-                      View Profile
-                    </a>
-                    <button
-                      onClick={() => setExpandedReel(reel)}
-                      className="h-8 w-8 flex items-center justify-center bg-black/70 border border-white/20 text-white hover:bg-[#4B9DCD] transition-colors cursor-pointer"
-                      aria-label="Expand video"
-                    >
-                      <Maximize2 className="h-3.5 w-3.5" />
-                    </button>
+                {/* Top Badge Strip */}
+                <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-20">
+                  <span className="px-2.5 py-1 bg-navy/90 border border-white/20 text-[0.65rem] font-bold uppercase tracking-wider text-sky flex items-center gap-1.5 backdrop-blur-sm">
+                    <Instagram className="h-3 w-3 text-sky" />
+                    {reel.tag}
+                  </span>
+                  <span className="px-2 py-0.5 bg-black/60 border border-white/10 text-[0.6rem] font-semibold text-slate-300 uppercase tracking-wider backdrop-blur-sm">
+                    {reel.duration}
+                  </span>
+                </div>
+
+                {/* Center Play Button Overlay */}
+                <div className="absolute inset-0 flex items-center justify-center z-20">
+                  <div className="h-16 w-16 bg-sky/90 border border-white/40 text-navy flex items-center justify-center shadow-2xl transition-all duration-300 group-hover:scale-110 group-hover:bg-white group-hover:text-navy">
+                    <Play className="h-7 w-7 fill-current ml-1" />
+                  </div>
+                </div>
+
+                {/* Bottom Content Area */}
+                <div className="absolute bottom-0 left-0 right-0 p-5 z-20 space-y-3 bg-gradient-to-t from-[#08121e] via-[#08121e]/90 to-transparent pt-12">
+                  <div className="space-y-1">
+                    <p className="text-[0.65rem] font-bold uppercase tracking-widest text-sky">
+                      @galaxy_system_official
+                    </p>
+                    <h3 className="text-base font-medium tracking-tight text-white leading-snug group-hover:text-sky transition-colors line-clamp-2">
+                      {reel.title}
+                    </h3>
+                  </div>
+
+                  <div className="pt-2 border-t border-white/15 flex items-center justify-between text-xs">
+                    <span className="text-[0.65rem] font-semibold uppercase tracking-wider text-slate-300">
+                      Watch Video Demo
+                    </span>
+                    <span className="px-2 py-1 bg-white/10 border border-white/20 text-[0.65rem] font-bold uppercase tracking-wider text-white group-hover:bg-sky group-hover:border-sky group-hover:text-navy transition-all">
+                      Play Reel
+                    </span>
                   </div>
                 </div>
               </div>
@@ -145,31 +165,53 @@ export function ReelCarousel() {
 
       {/* Expanded Lightbox Reel Modal */}
       {expandedReel && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-0 sm:p-4 animate-in fade-in">
-          <button
-            onClick={() => setExpandedReel(null)}
-            className="absolute top-4 right-4 z-40 h-10 w-10 rounded-full border border-white/20 bg-black/60 text-white flex items-center justify-center hover:bg-white hover:text-black transition-colors"
-            aria-label="Close modal"
-          >
-            <X className="h-5 w-5" />
-          </button>
+        <div className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black/95 p-4 animate-in fade-in">
+          <div className="relative w-full max-w-[440px] bg-[#08121e] border border-white/20 shadow-2xl flex flex-col overflow-hidden">
+            {/* Modal Header Bar */}
+            <div className="p-4 bg-[#0c1a29] border-b border-white/15 flex items-center justify-between z-20">
+              <div className="flex items-center gap-2">
+                <Instagram className="h-4 w-4 text-sky" />
+                <span className="text-xs font-bold uppercase tracking-wider text-white">
+                  @galaxy_system_official
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <a
+                  href={`https://www.instagram.com/reel/${expandedReel.instagramId}/`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-2.5 py-1 text-[0.65rem] font-bold uppercase tracking-wider bg-sky text-navy hover:bg-white transition-colors"
+                >
+                  Open in Instagram
+                </a>
+                <button
+                  onClick={() => setExpandedReel(null)}
+                  className="h-8 w-8 flex items-center justify-center border border-white/20 bg-white/10 text-white hover:bg-white hover:text-black transition-colors"
+                  aria-label="Close modal"
+                >
+                  <X className="h-4 w-4" />
+                </button>
+              </div>
+            </div>
 
-          <div className="relative w-full max-w-[420px] aspect-[9/16] max-h-screen sm:max-h-[92vh] bg-black shadow-2xl overflow-hidden flex items-center justify-center border border-white/10 sm:rounded-xl">
-            {expandedReel.isInstagram ? (
-              <iframe
-                src={`https://www.instagram.com/reel/${expandedReel.instagramId}/embed`}
-                className="w-full h-full border-0"
-                scrolling="no"
-                allowFullScreen
-              />
-            ) : (
-              <video
-                src={expandedReel.videoSrc}
-                controls
-                autoPlay
-                className="w-full h-full object-cover"
-              />
-            )}
+            {/* Video Container */}
+            <div className="relative w-full aspect-[9/16] bg-black flex items-center justify-center overflow-hidden">
+              {expandedReel.isInstagram ? (
+                <iframe
+                  src={`https://www.instagram.com/reel/${expandedReel.instagramId}/embed`}
+                  className="w-full h-full border-0"
+                  scrolling="no"
+                  allowFullScreen
+                />
+              ) : (
+                <video
+                  src={expandedReel.videoSrc}
+                  controls
+                  autoPlay
+                  className="w-full h-full object-cover"
+                />
+              )}
+            </div>
           </div>
         </div>
       )}
