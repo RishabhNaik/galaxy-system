@@ -4,7 +4,7 @@ import React, { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { Menu, X, Phone, Calendar } from "lucide-react"
+import { Menu, X, Phone, Calendar, Instagram, Facebook, Youtube } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ConsultationModal } from "@/components/consultation-modal"
 
@@ -162,6 +162,37 @@ export function Header() {
                 <Phone className="h-3.5 w-3.5 text-sky-dark" />
                 Call +91 98450 56726
               </a>
+
+              {/* Mobile Drawer Social Links */}
+              <div className="flex items-center justify-center gap-4 pt-2">
+                <a
+                  href="https://www.instagram.com/galaxy_system_official"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="h-8 w-8 rounded-full border border-navy/20 bg-mist flex items-center justify-center text-navy hover:bg-sky hover:text-white hover:border-sky transition-colors"
+                >
+                  <Instagram className="h-4 w-4" />
+                </a>
+                <a
+                  href="https://www.facebook.com/people/Galaxy-System/61590076568473/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="h-8 w-8 rounded-full border border-navy/20 bg-mist flex items-center justify-center text-navy hover:bg-sky hover:text-white hover:border-sky transition-colors"
+                >
+                  <Facebook className="h-4 w-4" />
+                </a>
+                <a
+                  href="https://www.youtube.com/@GalaxySystem-offical"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                  className="h-8 w-8 rounded-full border border-navy/20 bg-mist flex items-center justify-center text-navy hover:bg-sky hover:text-white hover:border-sky transition-colors"
+                >
+                  <Youtube className="h-4 w-4" />
+                </a>
+              </div>
             </div>
           </div>
         </div>

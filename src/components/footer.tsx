@@ -1,7 +1,7 @@
 import React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { MapPin, Phone, Mail, Clock, ArrowUpRight } from "lucide-react"
+import { MapPin, Phone, Mail, Clock, ArrowUpRight, Instagram, Facebook, Youtube } from "lucide-react"
 
 export function Footer() {
   return (
@@ -23,7 +23,39 @@ export function Footer() {
             <p className="text-xs text-slate-300 leading-relaxed font-normal max-w-sm">
               Adaptive mobility solutions & custom vehicle modifications for physically challenged drivers. Certified engineering, precision craftsmanship, and safety focused.
             </p>
-            <div className="pt-2">
+
+            {/* Social Media Links */}
+            <div className="pt-2 flex items-center gap-3">
+              <a
+                href="https://www.instagram.com/galaxy_system_official"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow Galaxy System on Instagram"
+                className="h-9 w-9 rounded-full border border-white/20 bg-white/5 flex items-center justify-center text-slate-300 hover:text-white hover:bg-sky hover:border-sky transition-all"
+              >
+                <Instagram className="h-4 w-4" />
+              </a>
+              <a
+                href="https://www.facebook.com/people/Galaxy-System/61590076568473/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow Galaxy System on Facebook"
+                className="h-9 w-9 rounded-full border border-white/20 bg-white/5 flex items-center justify-center text-slate-300 hover:text-white hover:bg-sky hover:border-sky transition-all"
+              >
+                <Facebook className="h-4 w-4" />
+              </a>
+              <a
+                href="https://www.youtube.com/@GalaxySystem-offical"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Subscribe to Galaxy System on YouTube"
+                className="h-9 w-9 rounded-full border border-white/20 bg-white/5 flex items-center justify-center text-slate-300 hover:text-white hover:bg-sky hover:border-sky transition-all"
+              >
+                <Youtube className="h-4 w-4" />
+              </a>
+            </div>
+
+            <div className="pt-1">
               <span className="inline-block px-3 py-1 bg-white/10 border border-white/20 text-[0.65rem] font-bold uppercase tracking-wider text-sky">
                 Bengaluru, Karnataka · India
               </span>
