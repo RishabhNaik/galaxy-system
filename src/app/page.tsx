@@ -25,10 +25,24 @@ import {
   Sparkles,
   UserCheck,
   HeartHandshake,
+  Star,
+  Quote,
+  MapPin,
+  Navigation,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react"
 
 export default function HomePage() {
   const [modalOpen, setModalOpen] = useState(false)
+  const reviewsContainerRef = React.useRef<HTMLDivElement>(null)
+
+  const scrollReviews = (direction: "left" | "right") => {
+    if (reviewsContainerRef.current) {
+      const scrollAmount = direction === "left" ? -360 : 360
+      reviewsContainerRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" })
+    }
+  }
 
   const solutions = [
     {
@@ -122,6 +136,49 @@ export default function HomePage() {
       },
     })),
   }
+
+  const testimonials = [
+    {
+      name: "Nagaraj M.",
+      location: "Bengaluru",
+      vehicle: "Hyundai Creta",
+      system: "Push-Pull Controls & Auto Clutch",
+      quote: "After my accident, driving felt impossible. Dr. Shiva Prasad and the team at Galaxy System modified my Creta with custom hand controls. Now I drive to work daily with complete independence!",
+      rating: 5,
+    },
+    {
+      name: "Suresh Kumar",
+      location: "Mysuru",
+      vehicle: "Maruti Swift Dzire",
+      system: "Left Foot Accelerator System",
+      quote: "The left-foot accelerator fitting was precise and smooth. RTO endorsement was seamless thanks to their official certification. Highly recommend Galaxy System for any driver.",
+      rating: 5,
+    },
+    {
+      name: "Anita Rao",
+      location: "Hubballi",
+      vehicle: "Prosthetic Limb Fitting",
+      system: "Endoskeletal Modular Prosthesis",
+      quote: "Extremely comfortable custom socket fitting. They analyzed my walking gait and personalized every detail. Excellent service and compassionate medical care.",
+      rating: 5,
+    },
+    {
+      name: "Rajesh Gowda",
+      location: "Tumakuru",
+      vehicle: "Kia Seltos",
+      system: "One Hand Steering & Ring Brake",
+      quote: "The one-hand steering spinner and ring accelerator setup are incredibly responsive. The vehicle control feels natural, safe, and effortless on highways.",
+      rating: 5,
+    },
+    {
+      name: "Dr. Priya V.",
+      location: "Mangaluru",
+      vehicle: "Honda City",
+      system: "Automatic Electronic Auto Clutch",
+      quote: "As a practicing physician, daily commuting was getting painful. The automatic electronic clutch system installed by Galaxy System completely eliminated foot fatigue.",
+      rating: 5,
+    },
+  ]
 
   return (
     <>
@@ -232,7 +289,7 @@ export default function HomePage() {
             {solutions.map((item, idx) => {
               const IconComp = item.icon
               return (
-                <Card key={idx} className="flex flex-col justify-between bg-white hover:border-sky transition-all overflow-hidden p-0 group">
+                <Card key={idx} className="flex flex-col justify-between bg-white hover:border-sky transition-all duration-300 card-hover-lift overflow-hidden p-0 group">
                   {/* Modern Image Container */}
                   <div className="relative h-64 sm:h-72 w-full bg-slate-900 overflow-hidden border-b border-navy/10">
                     <Image
@@ -287,104 +344,92 @@ export default function HomePage() {
       {/* ── 3. Video Reel Showcase Carousel (9:16 Orientation) ──── */}
       <ReelCarousel />
 
-      {/* ── 4. Why Choose Us Section ───────────────────────────────── */}
-      <section className="py-16 lg:py-24 bg-navy-dark text-white border-b border-white/10 bg-dot-pattern-dark bg-mesh-glow-dark relative">
-        <div className="mx-auto max-w-7xl px-5 lg:px-8">
+      {/* ── 3.5 Testimonials Carousel Section (Directly After Visual Demonstration Reels) ── */}
+      <section className="py-16 lg:py-24 bg-mist border-b border-navy/15">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8 space-y-8">
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            <div className="lg:col-span-6 space-y-6">
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky/10 border border-sky/30 text-[0.7rem] font-bold uppercase tracking-wider text-sky backdrop-blur-sm">
-                <Sparkles className="h-3.5 w-3.5 text-sky" />
-                Why Families Trust Us
+          {/* Header Row with Navigation Arrows */}
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div className="space-y-2">
+              <span className="inline-block px-3 py-1 bg-white border border-navy/20 text-[0.7rem] font-bold uppercase tracking-wider text-navy">
+                Real Driver Feedback
               </span>
-              <h2 className="text-3xl sm:text-4xl font-medium tracking-tight text-white leading-tight">
-                Safety-Engineered Mobility with 1-on-1 Clinical Precision
+              <h2 className="text-3xl sm:text-4xl font-medium tracking-tight text-navy">
+                Trusted By Over 12,000+ Empowered Drivers
               </h2>
-              <p className="text-sm text-slate-300 leading-relaxed font-normal">
-                At Galaxy System, we don't sell off-the-shelf parts. Founded and led by Dr. Shiva Prasad Y B (polio survivor & certified adaptive engineer), every car modification and prosthetic limb is custom-crafted to your specific ergonomics, vehicle, and mobility needs.
-              </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                <div className="p-4 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm hover:border-sky/40 hover:bg-white/[0.08] transition-all duration-300 group space-y-2">
-                  <div className="flex items-center justify-between">
-                    <div className="h-8 w-8 rounded-lg bg-sky/20 border border-sky/30 text-sky flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
-                      <UserCheck className="h-4 w-4" />
-                    </div>
-                    <span className="text-[10px] uppercase font-mono tracking-widest text-sky/70 font-semibold">01</span>
-                  </div>
-                  <h4 className="text-sm font-semibold text-white">Anatomical Personalization</h4>
-                  <p className="text-xs text-slate-400 leading-normal">Custom engineered to match your physical reach, muscle strength, and exact joint movement range.</p>
-                </div>
-
-                <div className="p-4 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm hover:border-sky/40 hover:bg-white/[0.08] transition-all duration-300 group space-y-2">
-                  <div className="flex items-center justify-between">
-                    <div className="h-8 w-8 rounded-lg bg-sky/20 border border-sky/30 text-sky flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
-                      <ShieldCheck className="h-4 w-4" />
-                    </div>
-                    <span className="text-[10px] uppercase font-mono tracking-widest text-sky/70 font-semibold">02</span>
-                  </div>
-                  <h4 className="text-sm font-semibold text-white">Govt & RTO Compliant</h4>
-                  <p className="text-xs text-slate-400 leading-normal">Officially authorized modifications that preserve original vehicle airbags, safety systems & insurance.</p>
-                </div>
-
-                <div className="p-4 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm hover:border-sky/40 hover:bg-white/[0.08] transition-all duration-300 group space-y-2">
-                  <div className="flex items-center justify-between">
-                    <div className="h-8 w-8 rounded-lg bg-sky/20 border border-sky/30 text-sky flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
-                      <Activity className="h-4 w-4" />
-                    </div>
-                    <span className="text-[10px] uppercase font-mono tracking-widest text-sky/70 font-semibold">03</span>
-                  </div>
-                  <h4 className="text-sm font-semibold text-white">Real Physical Trials</h4>
-                  <p className="text-xs text-slate-400 leading-normal">Hands-on testing using our Rajajinagar workshop demo vehicle & clinical casting setup before final fit.</p>
-                </div>
-
-                <div className="p-4 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm hover:border-sky/40 hover:bg-white/[0.08] transition-all duration-300 group space-y-2">
-                  <div className="flex items-center justify-between">
-                    <div className="h-8 w-8 rounded-lg bg-sky/20 border border-sky/30 text-sky flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
-                      <HeartHandshake className="h-4 w-4" />
-                    </div>
-                    <span className="text-[10px] uppercase font-mono tracking-widest text-sky/70 font-semibold">04</span>
-                  </div>
-                  <h4 className="text-sm font-semibold text-white">Lifetime Support & Care</h4>
-                  <p className="text-xs text-slate-400 leading-normal">Direct line to Dr. Shiva Prasad & engineering team for adjustments, alignment, maintenance & training.</p>
-                </div>
-              </div>
             </div>
 
-            <div className="lg:col-span-6">
-              <div className="p-8 border border-white/20 bg-slate-900 space-y-6">
-                <Badge variant="dark">Rajajinagar Workshop Hub</Badge>
-                <h3 className="text-2xl font-medium text-white">Visit Our Bengaluru Workshop</h3>
-                <p className="text-xs text-slate-300 leading-relaxed">
-                  Bring your vehicle or consult with our lead adaptive engineers. We conduct physical assessments, demonstrate hand control mechanisms, and map out custom modifications.
-                </p>
-
-                <div className="space-y-3 pt-2 text-xs text-slate-200 border-t border-white/10">
-                  <div className="flex items-center gap-3">
-                    <Clock className="h-4 w-4 text-sky" />
-                    <span>Monday to Saturday: 9:30 AM to 5:00 PM</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <PhoneCall className="h-4 w-4 text-sky" />
-                    <span>Direct Workshop Helpline: +91 98450 56726</span>
-                  </div>
-                </div>
-
-                <div className="pt-4">
-                  <Button
-                    onClick={() => setModalOpen(true)}
-                    variant="accent"
-                    size="lg"
-                    className="w-full justify-center"
-                  >
-                    Schedule Workshop Visit
-                  </Button>
-                </div>
-              </div>
+            {/* Desktop Navigation Arrows */}
+            <div className="hidden md:flex items-center gap-3">
+              <button
+                onClick={() => scrollReviews("left")}
+                aria-label="Scroll reviews left"
+                className="h-11 w-11 flex items-center justify-center border border-navy/20 bg-white text-navy hover:bg-navy hover:text-white transition-colors cursor-pointer"
+              >
+                <ChevronLeft className="h-5 w-5" />
+              </button>
+              <button
+                onClick={() => scrollReviews("right")}
+                aria-label="Scroll reviews right"
+                className="h-11 w-11 flex items-center justify-center border border-navy/20 bg-white text-navy hover:bg-navy hover:text-white transition-colors cursor-pointer"
+              >
+                <ChevronRight className="h-5 w-5" />
+              </button>
             </div>
-
           </div>
+
+          {/* Horizontal Reviews Carousel Deck */}
+          <div
+            ref={reviewsContainerRef}
+            className="flex gap-6 overflow-x-auto snap-x snap-mandatory py-2 pb-4 scroll-smooth scrollbar-none"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {testimonials.map((t, idx) => (
+              <div
+                key={idx}
+                className="snap-start shrink-0 w-[300px] sm:w-[360px] p-6 bg-white border border-navy/15 shadow-sm card-hover-lift flex flex-col justify-between space-y-6"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-1 text-amber-500">
+                      {[...Array(t.rating)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
+                      ))}
+                    </div>
+                    <Quote className="h-6 w-6 text-navy/20" />
+                  </div>
+                  <p className="text-sm text-body leading-relaxed italic">
+                    "{t.quote}"
+                  </p>
+                </div>
+
+                <div className="pt-4 border-t border-navy/10 space-y-1">
+                  <h4 className="text-sm font-bold text-navy">{t.name}</h4>
+                  <p className="text-xs text-sky-dark font-semibold">{t.vehicle} · {t.system}</p>
+                  <p className="text-[0.65rem] text-slate-400 uppercase tracking-wider">{t.location}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile Navigation Arrows (Below Carousel Deck on Right Side) */}
+          <div className="flex justify-end items-center gap-3 pt-2 md:hidden">
+            <button
+              onClick={() => scrollReviews("left")}
+              aria-label="Scroll reviews left"
+              className="h-10 w-10 flex items-center justify-center border border-navy/20 bg-white text-navy hover:bg-navy hover:text-white transition-colors cursor-pointer"
+            >
+              <ChevronLeft className="h-4 w-4" />
+            </button>
+            <button
+              onClick={() => scrollReviews("right")}
+              aria-label="Scroll reviews right"
+              className="h-10 w-10 flex items-center justify-center border border-navy/20 bg-white text-navy hover:bg-navy hover:text-white transition-colors cursor-pointer"
+            >
+              <ChevronRight className="h-4 w-4" />
+            </button>
+          </div>
+
         </div>
       </section>
 
@@ -415,6 +460,99 @@ export default function HomePage() {
             <Button asChild variant="outline" size="sm">
               <Link href="/faq">View All FAQs & Technical Answers</Link>
             </Button>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ── 5.5 Workshop Location & Map Section (Above Footer & Bottom CTA) ── */}
+      <section className="py-16 lg:py-24 bg-white border-b border-navy/15">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8 space-y-10">
+          
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div className="space-y-2">
+              <span className="inline-flex items-center gap-2 px-3 py-1 bg-sky-light border border-sky text-[0.7rem] font-bold uppercase tracking-wider text-sky-dark">
+                <MapPin className="h-3.5 w-3.5" />
+                Visit Our Workshop
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-medium tracking-tight text-navy">
+                Bengaluru Fitting & Assessment Center
+              </h2>
+            </div>
+            <a
+              href="https://maps.google.com/?q=Galaxy+System+Shankar+Mutt+Rajajinagar+Bengaluru"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 bg-navy text-white text-xs font-bold uppercase tracking-wider hover:bg-sky transition-colors cursor-pointer shrink-0"
+            >
+              <Navigation className="h-4 w-4" />
+              Open in Google Maps
+            </a>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            {/* Workshop Address & Hours Card */}
+            <div className="lg:col-span-4 p-8 bg-[#08121e] text-white border border-navy/20 shadow-xl flex flex-col justify-between space-y-6">
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-bold tracking-tight text-white mb-1">Galaxy System</h3>
+                  <p className="text-xs text-slate-300 leading-relaxed">
+                    Custom Adaptive Driving Modifications & Prosthetic Center
+                  </p>
+                </div>
+
+                <div className="space-y-4 text-xs">
+                  <div className="flex items-start gap-3">
+                    <MapPin className="h-4 w-4 text-sky shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-bold text-white uppercase tracking-wider text-[0.65rem] mb-0.5">Address</p>
+                      <p className="text-slate-300 leading-normal">
+                        Near Shankar Mutt, Nagapura, Rajajinagar, Bengaluru, Karnataka 560010
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <Clock className="h-4 w-4 text-sky shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-bold text-white uppercase tracking-wider text-[0.65rem] mb-0.5">Operating Hours</p>
+                      <p className="text-slate-300">Mon to Sat: 9:30 AM to 5:00 PM</p>
+                      <p className="text-slate-400 text-[0.65rem]">Sunday Closed</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <PhoneCall className="h-4 w-4 text-sky shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-bold text-white uppercase tracking-wider text-[0.65rem] mb-0.5">Helpline</p>
+                      <a href="tel:+919845056726" className="text-sky hover:underline font-bold">
+                        +91 98450 56726
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <Button
+                onClick={() => setModalOpen(true)}
+                variant="default"
+                size="lg"
+                className="w-full bg-sky text-navy hover:bg-white font-bold"
+              >
+                Schedule Assessment Visit
+              </Button>
+            </div>
+
+            {/* Google Map Embedded Iframe */}
+            <div className="lg:col-span-8 min-h-[380px] border border-navy/20 bg-slate-900 shadow-md relative overflow-hidden">
+              <iframe
+                title="Galaxy System Workshop Location Map"
+                src="https://maps.google.com/maps?q=Galaxy%20System%20Shankar%20Mutt%20Rajajinagar%20Bengaluru&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                className="w-full h-full min-h-[380px] border-0"
+                loading="lazy"
+                allowFullScreen
+              />
+            </div>
           </div>
 
         </div>

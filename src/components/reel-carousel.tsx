@@ -76,7 +76,8 @@ export function ReelCarousel() {
               Adaptive Controls In Real-World Operation
             </h2>
           </div>
-          <div className="flex items-center gap-3">
+          {/* Desktop Navigation Buttons */}
+          <div className="hidden md:flex items-center gap-3">
             <button
               onClick={() => scroll("left")}
               aria-label="Scroll left"
@@ -104,61 +105,35 @@ export function ReelCarousel() {
             return (
               <div
                 key={reel.id}
-                onClick={() => setExpandedReel(reel)}
-                className="snap-start shrink-0 w-[280px] sm:w-[320px] h-[480px] sm:h-[540px] relative border border-navy/20 bg-[#08121e] text-white shadow-xl overflow-hidden group cursor-pointer transition-all duration-300 hover:border-sky hover:shadow-2xl"
+                className="snap-start shrink-0 w-[300px] sm:w-[328px] h-[480px] sm:h-[520px] relative overflow-hidden bg-black border border-navy/15 shadow-md"
               >
-                {/* Poster Image with Zoom & Dark Gradient Overlay */}
-                <div className="relative w-full h-full bg-slate-950 overflow-hidden">
-                  <Image
-                    src={reel.poster}
-                    alt={reel.title}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-85"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#08121e] via-[#08121e]/40 to-black/60" />
-                </div>
-
-                {/* Top Badge Strip */}
-                <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-20">
-                  <span className="px-2.5 py-1 bg-navy/90 border border-white/20 text-[0.65rem] font-bold uppercase tracking-wider text-sky flex items-center gap-1.5 backdrop-blur-sm">
-                    <Instagram className="h-3 w-3 text-sky" />
-                    {reel.tag}
-                  </span>
-                  <span className="px-2 py-0.5 bg-black/60 border border-white/10 text-[0.6rem] font-semibold text-slate-300 uppercase tracking-wider backdrop-blur-sm">
-                    {reel.duration}
-                  </span>
-                </div>
-
-                {/* Center Play Button Overlay */}
-                <div className="absolute inset-0 flex items-center justify-center z-20">
-                  <div className="h-16 w-16 bg-sky/90 border border-white/40 text-navy flex items-center justify-center shadow-2xl transition-all duration-300 group-hover:scale-110 group-hover:bg-white group-hover:text-navy">
-                    <Play className="h-7 w-7 fill-current ml-1" />
-                  </div>
-                </div>
-
-                {/* Bottom Content Area */}
-                <div className="absolute bottom-0 left-0 right-0 p-5 z-20 space-y-3 bg-gradient-to-t from-[#08121e] via-[#08121e]/90 to-transparent pt-12">
-                  <div className="space-y-1">
-                    <p className="text-[0.65rem] font-bold uppercase tracking-widest text-sky">
-                      @galaxy_system_official
-                    </p>
-                    <h3 className="text-base font-medium tracking-tight text-white leading-snug group-hover:text-sky transition-colors line-clamp-2">
-                      {reel.title}
-                    </h3>
-                  </div>
-
-                  <div className="pt-2 border-t border-white/15 flex items-center justify-between text-xs">
-                    <span className="text-[0.65rem] font-semibold uppercase tracking-wider text-slate-300">
-                      Watch Video Demo
-                    </span>
-                    <span className="px-2 py-1 bg-white/10 border border-white/20 text-[0.65rem] font-bold uppercase tracking-wider text-white group-hover:bg-sky group-hover:border-sky group-hover:text-navy transition-all">
-                      Play Reel
-                    </span>
-                  </div>
-                </div>
+                <iframe
+                  src={`https://www.instagram.com/reel/${reel.instagramId}/embed`}
+                  className="w-full h-full border-0"
+                  scrolling="no"
+                  allowFullScreen
+                />
               </div>
             )
           })}
+        </div>
+
+        {/* Mobile Navigation Controls (Positioned Below Embeds Deck on Right Side) */}
+        <div className="flex justify-end items-center gap-3 pt-4 md:hidden">
+          <button
+            onClick={() => scroll("left")}
+            aria-label="Scroll left"
+            className="h-11 w-11 flex items-center justify-center border border-navy/20 bg-mist text-navy hover:bg-navy hover:text-white transition-colors cursor-pointer"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+          <button
+            onClick={() => scroll("right")}
+            aria-label="Scroll right"
+            className="h-11 w-11 flex items-center justify-center border border-navy/20 bg-mist text-navy hover:bg-navy hover:text-white transition-colors cursor-pointer"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
         </div>
 
       </div>
@@ -199,7 +174,7 @@ export function ReelCarousel() {
               {expandedReel.isInstagram ? (
                 <iframe
                   src={`https://www.instagram.com/reel/${expandedReel.instagramId}/embed`}
-                  className="w-full h-full border-0"
+                  className="absolute -top-[56px] -left-[1%] w-[102%] h-[calc(100%+114px)] border-0"
                   scrolling="no"
                   allowFullScreen
                 />
